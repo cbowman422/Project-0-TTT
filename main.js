@@ -44,14 +44,12 @@ function buttonOneClick(){
     console.log("button 1 clicked")
     if (player === "playerOne") {
         playerOneChoice.push(1)
-      
         buttonOne.removeEventListener('click', buttonOneClick)
         checkWinnerOne()
         checkWinnerTwo()
         return player = "playerTwo"
     } else if (player === "playerTwo") {
         playerTwoChoice.push(1)
-   
         buttonOne.removeEventListener('click', buttonOneClick)
         checkWinnerOne()
         checkWinnerTwo()
@@ -63,14 +61,12 @@ function buttonTwoClick(){
     console.log("button 2 clicked")
     if (player === "playerOne") {
         playerOneChoice.push(2)
-        
         buttonTwo.removeEventListener('click', buttonTwoClick)
         checkWinnerOne()
         checkWinnerTwo()
         return player = "playerTwo"
     } else if (player === "playerTwo") {
         playerTwoChoice.push(2)
-        
         buttonTwo.removeEventListener('click', buttonTwoClick)
         checkWinnerOne()
         checkWinnerTwo()
@@ -82,14 +78,12 @@ function buttonThreeClick(){
     console.log("button 3 clicked")
     if (player === "playerOne") {
         playerOneChoice.push(3)
-    
         buttonThree.removeEventListener('click', buttonThreeClick)
         checkWinnerOne()
         checkWinnerTwo()
         return player = "playerTwo"
     } else if (player === "playerTwo") {
         playerTwoChoice.push(3)
-       
         buttonThree.removeEventListener('click', buttonThreeClick)
         checkWinnerOne()
         checkWinnerTwo()
@@ -101,14 +95,12 @@ function buttonFourClick(){
     console.log("button 4 clicked")
     if (player === "playerOne") {
         playerOneChoice.push(4)
-     
         buttonFour.removeEventListener('click', buttonFourClick)
         checkWinnerOne()
         checkWinnerTwo()
         return player = "playerTwo"
     } else if (player === "playerTwo") {
         playerTwoChoice.push(4)
-       
         buttonFour.removeEventListener('click', buttonFourClick)
         checkWinnerOne()
         checkWinnerTwo()
@@ -120,14 +112,12 @@ function buttonFiveClick(){
     console.log("button 5 clicked")
     if (player === "playerOne") {
         playerOneChoice.push(5)
-      
         buttonFive.removeEventListener('click', buttonFiveClick)
         checkWinnerOne()
         checkWinnerTwo()
         return player = "playerTwo"
     } else if (player === "playerTwo") {
         playerTwoChoice.push(5)
-      
         buttonFive.removeEventListener('click', buttonFiveClick)
         checkWinnerOne()
         checkWinnerTwo()
@@ -139,14 +129,12 @@ function buttonSixClick(){
     console.log("button 6 clicked")
     if (player === "playerOne") {
         playerOneChoice.push(6)
-
         buttonSix.removeEventListener('click', buttonSixClick)
         checkWinnerOne()
         checkWinnerTwo()
         return player = "playerTwo"
     } else if (player === "playerTwo") {
         playerTwoChoice.push(6)
-      
         buttonSix.removeEventListener('click', buttonSixClick)
         checkWinnerOne()
         checkWinnerTwo()
@@ -158,14 +146,12 @@ function buttonSevenClick(){
     console.log("button 7 clicked")
     if (player === "playerOne") {
         playerOneChoice.push(7)
-       
         buttonSeven.removeEventListener('click', buttonSevenClick)
         checkWinnerOne()
         checkWinnerTwo()
         return player = "playerTwo"
     } else if (player === "playerTwo") {
         playerTwoChoice.push(7)
-      
         buttonSeven.removeEventListener('click', buttonSevenClick)
         checkWinnerOne()
         checkWinnerTwo()
@@ -177,14 +163,12 @@ function buttonEightClick(){
     console.log("button 8 clicked")
     if (player === "playerOne") {
         playerOneChoice.push(8)
-     
         buttonEight.removeEventListener('click', buttonEightClick)
         checkWinnerOne()
         checkWinnerTwo()
         return player = "playerTwo"
     } else if (player === "playerTwo") {
         playerTwoChoice.push(8)
-      
         buttonEight.removeEventListener('click', buttonEightClick)
         checkWinnerOne()
         checkWinnerTwo()
@@ -196,14 +180,12 @@ function buttonNineClick(){
     console.log("button 9 clicked")
     if (player === "playerOne") {
         playerOneChoice.push(9)
-        
         buttonNine.removeEventListener('click', buttonNineClick)
         checkWinnerOne()
         checkWinnerTwo()
         return player = "playerTwo"
     } else if (player === "playerTwo") {
         playerTwoChoice.push(9)
-      
         buttonNine.removeEventListener('click', buttonNineClick)
         checkWinnerOne()
         checkWinnerTwo()
@@ -279,7 +261,10 @@ function checkWinnerTwo(){
     }
 }
 
+let winner = ""
+
 function playerOneWins(){
+    winner = "playerTwoWinner"
     console.log(playerOneChoice)
     console.log("player 1 wins!")
     buttonOne.addEventListener('click', buttonOneClick)
@@ -294,10 +279,10 @@ function playerOneWins(){
     buttonReset.addEventListener('click', buttonResetClick)
     playerOneChoice = [];
     playerTwoChoice = [];
-    return player = "playerOne"
 }
 
 function playerTwoWins(){
+    winner = "playerTwoWinner"
     console.log(playerTwoChoice)
     console.log("player 2 wins!!")
     buttonOne.addEventListener('click', buttonOneClick)
@@ -312,5 +297,6 @@ function playerTwoWins(){
     buttonReset.addEventListener('click', buttonResetClick)
     playerOneChoice = [];
     playerTwoChoice = [];
-    return player = "playerOne"
+    //return player = "playerOne"
 }
+
