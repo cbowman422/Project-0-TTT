@@ -11,6 +11,7 @@ buttonSix = document.querySelector('#button6')
 buttonSeven = document.querySelector('#button7')
 buttonEight = document.querySelector('#button8')
 buttonNine = document.querySelector('#button9')
+buttonReset = document.querySelector('#resetButtonId')
 
 
 // Adding a click event listener to all of my JS stored buttons
@@ -23,6 +24,7 @@ buttonSix.addEventListener('click', buttonSixClick)
 buttonSeven.addEventListener('click', buttonSevenClick)
 buttonEight.addEventListener('click', buttonEightClick)
 buttonNine.addEventListener('click', buttonNineClick)
+buttonReset.addEventListener('click', buttonResetClick)
 
 // maybe try using 1 function for all clicked buttons
 //
@@ -65,4 +67,8 @@ function buttonEightClick(){
 
 function buttonNineClick(){
     console.log("button 9 clicked")
+}
+
+function buttonResetClick(){
+    console.log("reset button clicked")
 }
