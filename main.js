@@ -33,7 +33,11 @@ buttonReset.addEventListener('click', buttonResetClick)
 //     console.log("button clicked")
 // }
 
+// alternate players
 let player = "playerOne"
+let playerOneChoice = []
+let playerTwoChoice = []
+
 
 function buttonOneClick(){
     console.log("button 1 clicked")
@@ -44,50 +48,116 @@ function buttonOneClick(){
     } else if (player === "playerTwo") {
         playerTwoChoice.push('1')
         console.log(playerTwoChoice + " player 2")
+        return player = "playerOne"
     }
 }
 // functions being called when each button is clicked
 
 function buttonTwoClick(){
     console.log("button 2 clicked")
-    playerOneChoice.push('2')
-    console.log(playerOneChoice)
+    if (player === "playerOne") {
+        playerOneChoice.push('2')
+        console.log(playerOneChoice + " player 1")
+        return player = "playerTwo"
+    } else if (player === "playerTwo") {
+        playerTwoChoice.push('2')
+        console.log(playerTwoChoice + " player 2")
+        return player = "playerOne"
+    }
 }
 
 function buttonThreeClick(){
     console.log("button 3 clicked")
+    if (player === "playerOne") {
+        playerOneChoice.push('3')
+        console.log(playerOneChoice + " player 1")
+        return player = "playerTwo"
+    } else if (player === "playerTwo") {
+        playerTwoChoice.push('3')
+        console.log(playerTwoChoice + " player 2")
+        return player = "playerOne"
+    }
 }
 
 function buttonFourClick(){
     console.log("button 4 clicked")
+    if (player === "playerOne") {
+        playerOneChoice.push('4')
+        console.log(playerOneChoice + " player 1")
+        return player = "playerTwo"
+    } else if (player === "playerTwo") {
+        playerTwoChoice.push('4')
+        console.log(playerTwoChoice + " player 2")
+        return player = "playerOne"
+    }
 }
 
 function buttonFiveClick(){
     console.log("button 5 clicked")
+    if (player === "playerOne") {
+        playerOneChoice.push('5')
+        console.log(playerOneChoice + " player 1")
+        return player = "playerTwo"
+    } else if (player === "playerTwo") {
+        playerTwoChoice.push('5')
+        console.log(playerTwoChoice + " player 2")
+        return player = "playerOne"
+    }
 }
 
 function buttonSixClick(){
     console.log("button 6 clicked")
+    if (player === "playerOne") {
+        playerOneChoice.push('6')
+        console.log(playerOneChoice + " player 1")
+        return player = "playerTwo"
+    } else if (player === "playerTwo") {
+        playerTwoChoice.push('6')
+        console.log(playerTwoChoice + " player 2")
+        return player = "playerOne"
+    }
 }
 
 function buttonSevenClick(){
     console.log("button 7 clicked")
+    if (player === "playerOne") {
+        playerOneChoice.push('7')
+        console.log(playerOneChoice + " player 1")
+        return player = "playerTwo"
+    } else if (player === "playerTwo") {
+        playerTwoChoice.push('7')
+        console.log(playerTwoChoice + " player 2")
+        return player = "playerOne"
+    }
 }
 
 function buttonEightClick(){
     console.log("button 8 clicked")
+    if (player === "playerOne") {
+        playerOneChoice.push('8')
+        console.log(playerOneChoice + " player 1")
+        return player = "playerTwo"
+    } else if (player === "playerTwo") {
+        playerTwoChoice.push('8')
+        console.log(playerTwoChoice + " player 2")
+        return player = "playerOne"
+    }
 }
 
 function buttonNineClick(){
     console.log("button 9 clicked")
+    if (player === "playerOne") {
+        playerOneChoice.push('9')
+        console.log(playerOneChoice + " player 1")
+        return player = "playerTwo"
+    } else if (player === "playerTwo") {
+        playerTwoChoice.push('9')
+        console.log(playerTwoChoice + " player 2")
+        return player = "playerOne"
+    }
 }
 
 function buttonResetClick(){
     console.log("reset button clicked")
 }
-
-
-// alternate players
-playerOneChoice = []
-playerTwoChoice = []
 
