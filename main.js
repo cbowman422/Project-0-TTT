@@ -43,12 +43,14 @@ let playerTwoChoice = []
 function buttonOneClick(){
     console.log("button 1 clicked")
     if (player === "playerOne") {
+        document.querySelector('#button1').innerHTML = " X "
         playerOneChoice.push(1)
         buttonOne.removeEventListener('click', buttonOneClick)
         checkWinnerOne()
         checkWinnerTwo()
         return player = "playerTwo"
     } else if (player === "playerTwo") {
+        document.querySelector('#button1').innerHTML = " O "
         playerTwoChoice.push(1)
         buttonOne.removeEventListener('click', buttonOneClick)
         checkWinnerOne()
