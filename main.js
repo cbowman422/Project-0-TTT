@@ -39,31 +39,33 @@ let playerOneChoice = []
 let playerTwoChoice = []
 
 
+// functions being called when each button is clicked
 function buttonOneClick(){
     console.log("button 1 clicked")
     if (player === "playerOne") {
-        playerOneChoice.push('1')
+        playerOneChoice.push(1)
         console.log(playerOneChoice + " player 1")
         buttonOne.removeEventListener('click', buttonOneClick)
+        checkWinnerOne()
         return player = "playerTwo"
     } else if (player === "playerTwo") {
-        playerTwoChoice.push('1')
+        playerTwoChoice.push(1)
         console.log(playerTwoChoice + " player 2")
         buttonOne.removeEventListener('click', buttonOneClick)
+        checkWinnerOne()
         return player = "playerOne"
     }
 }
-// functions being called when each button is clicked
 
 function buttonTwoClick(){
     console.log("button 2 clicked")
     if (player === "playerOne") {
-        playerOneChoice.push('2')
+        playerOneChoice.push(2)
         console.log(playerOneChoice + " player 1")
         buttonTwo.removeEventListener('click', buttonTwoClick)
         return player = "playerTwo"
     } else if (player === "playerTwo") {
-        playerTwoChoice.push('2')
+        playerTwoChoice.push(2)
         console.log(playerTwoChoice + " player 2")
         buttonTwo.removeEventListener('click', buttonTwoClick)
         return player = "playerOne"
@@ -73,12 +75,12 @@ function buttonTwoClick(){
 function buttonThreeClick(){
     console.log("button 3 clicked")
     if (player === "playerOne") {
-        playerOneChoice.push('3')
+        playerOneChoice.push(3)
         console.log(playerOneChoice + " player 1")
         buttonThree.removeEventListener('click', buttonThreeClick)
         return player = "playerTwo"
     } else if (player === "playerTwo") {
-        playerTwoChoice.push('3')
+        playerTwoChoice.push(3)
         console.log(playerTwoChoice + " player 2")
         buttonThree.removeEventListener('click', buttonThreeClick)
         return player = "playerOne"
@@ -88,12 +90,12 @@ function buttonThreeClick(){
 function buttonFourClick(){
     console.log("button 4 clicked")
     if (player === "playerOne") {
-        playerOneChoice.push('4')
+        playerOneChoice.push(4)
         console.log(playerOneChoice + " player 1")
         buttonFour.removeEventListener('click', buttonFourClick)
         return player = "playerTwo"
     } else if (player === "playerTwo") {
-        playerTwoChoice.push('4')
+        playerTwoChoice.push(4)
         console.log(playerTwoChoice + " player 2")
         buttonFour.removeEventListener('click', buttonFourClick)
         return player = "playerOne"
@@ -103,12 +105,12 @@ function buttonFourClick(){
 function buttonFiveClick(){
     console.log("button 5 clicked")
     if (player === "playerOne") {
-        playerOneChoice.push('5')
+        playerOneChoice.push(5)
         console.log(playerOneChoice + " player 1")
         buttonFive.removeEventListener('click', buttonFiveClick)
         return player = "playerTwo"
     } else if (player === "playerTwo") {
-        playerTwoChoice.push('5')
+        playerTwoChoice.push(5)
         console.log(playerTwoChoice + " player 2")
         buttonFive.removeEventListener('click', buttonFiveClick)
         return player = "playerOne"
@@ -118,12 +120,12 @@ function buttonFiveClick(){
 function buttonSixClick(){
     console.log("button 6 clicked")
     if (player === "playerOne") {
-        playerOneChoice.push('6')
+        playerOneChoice.push(6)
         console.log(playerOneChoice + " player 1")
         buttonSix.removeEventListener('click', buttonSixClick)
         return player = "playerTwo"
     } else if (player === "playerTwo") {
-        playerTwoChoice.push('6')
+        playerTwoChoice.push(6)
         console.log(playerTwoChoice + " player 2")
         buttonSix.removeEventListener('click', buttonSixClick)
         return player = "playerOne"
@@ -133,12 +135,12 @@ function buttonSixClick(){
 function buttonSevenClick(){
     console.log("button 7 clicked")
     if (player === "playerOne") {
-        playerOneChoice.push('7')
+        playerOneChoice.push(7)
         console.log(playerOneChoice + " player 1")
         buttonSeven.removeEventListener('click', buttonSevenClick)
         return player = "playerTwo"
     } else if (player === "playerTwo") {
-        playerTwoChoice.push('7')
+        playerTwoChoice.push(7)
         console.log(playerTwoChoice + " player 2")
         buttonSeven.removeEventListener('click', buttonSevenClick)
         return player = "playerOne"
@@ -148,12 +150,12 @@ function buttonSevenClick(){
 function buttonEightClick(){
     console.log("button 8 clicked")
     if (player === "playerOne") {
-        playerOneChoice.push('8')
+        playerOneChoice.push(8)
         console.log(playerOneChoice + " player 1")
         buttonEight.removeEventListener('click', buttonEightClick)
         return player = "playerTwo"
     } else if (player === "playerTwo") {
-        playerTwoChoice.push('8')
+        playerTwoChoice.push(8)
         console.log(playerTwoChoice + " player 2")
         buttonEight.removeEventListener('click', buttonEightClick)
         return player = "playerOne"
@@ -163,12 +165,12 @@ function buttonEightClick(){
 function buttonNineClick(){
     console.log("button 9 clicked")
     if (player === "playerOne") {
-        playerOneChoice.push('9')
+        playerOneChoice.push(9)
         console.log(playerOneChoice + " player 1")
         buttonNine.removeEventListener('click', buttonNineClick)
         return player = "playerTwo"
     } else if (player === "playerTwo") {
-        playerTwoChoice.push('9')
+        playerTwoChoice.push(9)
         console.log(playerTwoChoice + " player 2")
         return player = "playerOne"
     }
@@ -178,3 +180,14 @@ function buttonResetClick(){
     console.log("reset button clicked")
 }
 
+function checkWinnerOne(){
+    for (i = 0; i < playerOneChoice.length; i++){
+        console.log("checkWinner " + i)
+        console.log(playerOneChoice)
+    }
+        if (playerOneChoice.includes(1) && playerOneChoice.includes(2)){
+            console.log("winner!!!")
+        } else {
+            console.log("no winner")
+        }
+}
