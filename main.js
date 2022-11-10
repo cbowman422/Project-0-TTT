@@ -26,19 +26,32 @@ buttonEight.addEventListener('click', buttonEightClick)
 buttonNine.addEventListener('click', buttonNineClick)
 buttonReset.addEventListener('click', buttonResetClick)
 
+
 // maybe try using 1 function for all clicked buttons
 //
 // function buttonClick(){
 //     console.log("button clicked")
 // }
 
-// functions being called when each button is clicked
+let player = "playerOne"
+
 function buttonOneClick(){
     console.log("button 1 clicked")
+    if (player === "playerOne") {
+        playerOneChoice.push('1')
+        console.log(playerOneChoice + " player 1")
+        return player = "playerTwo"
+    } else if (player === "playerTwo") {
+        playerTwoChoice.push('1')
+        console.log(playerTwoChoice + " player 2")
+    }
 }
+// functions being called when each button is clicked
 
 function buttonTwoClick(){
     console.log("button 2 clicked")
+    playerOneChoice.push('2')
+    console.log(playerOneChoice)
 }
 
 function buttonThreeClick(){
@@ -72,3 +85,9 @@ function buttonNineClick(){
 function buttonResetClick(){
     console.log("reset button clicked")
 }
+
+
+// alternate players
+playerOneChoice = []
+playerTwoChoice = []
+
