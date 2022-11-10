@@ -63,11 +63,13 @@ function buttonTwoClick(){
         playerOneChoice.push(2)
         console.log(playerOneChoice + " player 1")
         buttonTwo.removeEventListener('click', buttonTwoClick)
+        checkWinnerOne()
         return player = "playerTwo"
     } else if (player === "playerTwo") {
         playerTwoChoice.push(2)
         console.log(playerTwoChoice + " player 2")
         buttonTwo.removeEventListener('click', buttonTwoClick)
+        checkWinnerOne()
         return player = "playerOne"
     }
 }
@@ -78,11 +80,13 @@ function buttonThreeClick(){
         playerOneChoice.push(3)
         console.log(playerOneChoice + " player 1")
         buttonThree.removeEventListener('click', buttonThreeClick)
+        checkWinnerOne()
         return player = "playerTwo"
     } else if (player === "playerTwo") {
         playerTwoChoice.push(3)
         console.log(playerTwoChoice + " player 2")
         buttonThree.removeEventListener('click', buttonThreeClick)
+        checkWinnerOne()
         return player = "playerOne"
     }
 }
@@ -93,11 +97,13 @@ function buttonFourClick(){
         playerOneChoice.push(4)
         console.log(playerOneChoice + " player 1")
         buttonFour.removeEventListener('click', buttonFourClick)
+        checkWinnerOne()
         return player = "playerTwo"
     } else if (player === "playerTwo") {
         playerTwoChoice.push(4)
         console.log(playerTwoChoice + " player 2")
         buttonFour.removeEventListener('click', buttonFourClick)
+        checkWinnerOne()
         return player = "playerOne"
     }
 }
@@ -108,11 +114,13 @@ function buttonFiveClick(){
         playerOneChoice.push(5)
         console.log(playerOneChoice + " player 1")
         buttonFive.removeEventListener('click', buttonFiveClick)
+        checkWinnerOne()
         return player = "playerTwo"
     } else if (player === "playerTwo") {
         playerTwoChoice.push(5)
         console.log(playerTwoChoice + " player 2")
         buttonFive.removeEventListener('click', buttonFiveClick)
+        checkWinnerOne()
         return player = "playerOne"
     }
 }
@@ -123,11 +131,13 @@ function buttonSixClick(){
         playerOneChoice.push(6)
         console.log(playerOneChoice + " player 1")
         buttonSix.removeEventListener('click', buttonSixClick)
+        checkWinnerOne()
         return player = "playerTwo"
     } else if (player === "playerTwo") {
         playerTwoChoice.push(6)
         console.log(playerTwoChoice + " player 2")
         buttonSix.removeEventListener('click', buttonSixClick)
+        checkWinnerOne()
         return player = "playerOne"
     }
 }
@@ -138,11 +148,13 @@ function buttonSevenClick(){
         playerOneChoice.push(7)
         console.log(playerOneChoice + " player 1")
         buttonSeven.removeEventListener('click', buttonSevenClick)
+        checkWinnerOne()
         return player = "playerTwo"
     } else if (player === "playerTwo") {
         playerTwoChoice.push(7)
         console.log(playerTwoChoice + " player 2")
         buttonSeven.removeEventListener('click', buttonSevenClick)
+        checkWinnerOne()
         return player = "playerOne"
     }
 }
@@ -153,11 +165,13 @@ function buttonEightClick(){
         playerOneChoice.push(8)
         console.log(playerOneChoice + " player 1")
         buttonEight.removeEventListener('click', buttonEightClick)
+        checkWinnerOne()
         return player = "playerTwo"
     } else if (player === "playerTwo") {
         playerTwoChoice.push(8)
         console.log(playerTwoChoice + " player 2")
         buttonEight.removeEventListener('click', buttonEightClick)
+        checkWinnerOne()
         return player = "playerOne"
     }
 }
@@ -168,10 +182,13 @@ function buttonNineClick(){
         playerOneChoice.push(9)
         console.log(playerOneChoice + " player 1")
         buttonNine.removeEventListener('click', buttonNineClick)
+        checkWinnerOne()
         return player = "playerTwo"
     } else if (player === "playerTwo") {
         playerTwoChoice.push(9)
         console.log(playerTwoChoice + " player 2")
+        buttonNine.removeEventListener('click', buttonNineClick)
+        checkWinnerOne()
         return player = "playerOne"
     }
 }
@@ -180,14 +197,52 @@ function buttonResetClick(){
     console.log("reset button clicked")
 }
 
+
 function checkWinnerOne(){
-    for (i = 0; i < playerOneChoice.length; i++){
-        console.log("checkWinner " + i)
-        console.log(playerOneChoice)
-    }
-        if (playerOneChoice.includes(1) && playerOneChoice.includes(2)){
+        if (playerOneChoice.includes(1) && playerOneChoice.includes(2) && playerOneChoice.includes(3)){
+            console.log("winner!!!")
+        } else if (playerOneChoice.includes(4) && playerOneChoice.includes(5) && playerOneChoice.includes(6)){
+            console.log("winner!!!")
+        } else if (playerOneChoice.includes(7) && playerOneChoice.includes(8) && playerOneChoice.includes(9)){
+            console.log("winner!!!")
+        } else if (playerOneChoice.includes(1) && playerOneChoice.includes(4) && playerOneChoice.includes(7)){
+            console.log("winner!!!")
+        } else if (playerOneChoice.includes(1) && playerOneChoice.includes(4) && playerOneChoice.includes(7)){
+            console.log("winner!!!")
+        } else if (playerOneChoice.includes(2) && playerOneChoice.includes(5) && playerOneChoice.includes(8)){
+            console.log("winner!!!")
+        } else if (playerOneChoice.includes(3) && playerOneChoice.includes(6) && playerOneChoice.includes(9)){
+            console.log("winner!!!")
+        } else if (playerOneChoice.includes(1) && playerOneChoice.includes(5) && playerOneChoice.includes(9)){
+            console.log("winner!!!")
+        } else if (playerOneChoice.includes(2) && playerOneChoice.includes(5) && playerOneChoice.includes(8)){
             console.log("winner!!!")
         } else {
-            console.log("no winner")
+            console.log("not a winner")
         }
+}
+
+
+function checkWinnerTwo(){
+    if (playerTwoChoice.includes(1) && playerTwoChoice.includes(2) && playerTwoChoice.includes(3)){
+        console.log("winner!!!")
+    } else if (playerTwoChoice.includes(4) && playerTwoChoice.includes(5) && playerTwoChoice.includes(6)){
+        console.log("winner!!!")
+    } else if (playerTwoChoice.includes(7) && playerTwoChoice.includes(8) && playerTwoChoice.includes(9)){
+        console.log("winner!!!")
+    } else if (playerTwoChoice.includes(1) && playerTwoChoice.includes(4) && playerTwoChoice.includes(7)){
+        console.log("winner!!!")
+    } else if (playerTwoChoice.includes(1) && playerTwoChoice.includes(4) && playerTwoChoice.includes(7)){
+        console.log("winner!!!")
+    } else if (playerTwoChoice.includes(2) && playerTwoChoice.includes(5) && playerTwoChoice.includes(8)){
+        console.log("winner!!!")
+    } else if (playerTwoChoice.includes(3) && playerTwoChoice.includes(6) && playerTwoChoice.includes(9)){
+        console.log("winner!!!")
+    } else if (playerTwoChoice.includes(1) && playerTwoChoice.includes(5) && playerTwoChoice.includes(9)){
+        console.log("winner!!!")
+    } else if (playerTwoChoice.includes(2) && playerTwoChoice.includes(5) && playerTwoChoice.includes(8)){
+        console.log("winner!!!")
+    } else {
+        console.log("not a winner")
+    }
 }
