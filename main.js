@@ -60,10 +60,12 @@ function buttonTwoClick(){
     if (player === "playerOne") {
         playerOneChoice.push('2')
         console.log(playerOneChoice + " player 1")
+        buttonTwo.removeEventListener('click', buttonTwoClick)
         return player = "playerTwo"
     } else if (player === "playerTwo") {
         playerTwoChoice.push('2')
         console.log(playerTwoChoice + " player 2")
+        buttonTwo.removeEventListener('click', buttonTwoClick)
         return player = "playerOne"
     }
 }
@@ -73,10 +75,12 @@ function buttonThreeClick(){
     if (player === "playerOne") {
         playerOneChoice.push('3')
         console.log(playerOneChoice + " player 1")
+        buttonThree.removeEventListener('click', buttonThreeClick)
         return player = "playerTwo"
     } else if (player === "playerTwo") {
         playerTwoChoice.push('3')
         console.log(playerTwoChoice + " player 2")
+        buttonThree.removeEventListener('click', buttonThreeClick)
         return player = "playerOne"
     }
 }
@@ -86,10 +90,12 @@ function buttonFourClick(){
     if (player === "playerOne") {
         playerOneChoice.push('4')
         console.log(playerOneChoice + " player 1")
+        buttonFour.removeEventListener('click', buttonFourClick)
         return player = "playerTwo"
     } else if (player === "playerTwo") {
         playerTwoChoice.push('4')
         console.log(playerTwoChoice + " player 2")
+        buttonFour.removeEventListener('click', buttonFourClick)
         return player = "playerOne"
     }
 }
@@ -99,10 +105,12 @@ function buttonFiveClick(){
     if (player === "playerOne") {
         playerOneChoice.push('5')
         console.log(playerOneChoice + " player 1")
+        buttonFive.removeEventListener('click', buttonFiveClick)
         return player = "playerTwo"
     } else if (player === "playerTwo") {
         playerTwoChoice.push('5')
         console.log(playerTwoChoice + " player 2")
+        buttonFive.removeEventListener('click', buttonFiveClick)
         return player = "playerOne"
     }
 }
@@ -112,10 +120,12 @@ function buttonSixClick(){
     if (player === "playerOne") {
         playerOneChoice.push('6')
         console.log(playerOneChoice + " player 1")
+        buttonSix.removeEventListener('click', buttonSixClick)
         return player = "playerTwo"
     } else if (player === "playerTwo") {
         playerTwoChoice.push('6')
         console.log(playerTwoChoice + " player 2")
+        buttonSix.removeEventListener('click', buttonSixClick)
         return player = "playerOne"
     }
 }
@@ -125,10 +135,12 @@ function buttonSevenClick(){
     if (player === "playerOne") {
         playerOneChoice.push('7')
         console.log(playerOneChoice + " player 1")
+        buttonSeven.removeEventListener('click', buttonSevenClick)
         return player = "playerTwo"
     } else if (player === "playerTwo") {
         playerTwoChoice.push('7')
         console.log(playerTwoChoice + " player 2")
+        buttonSeven.removeEventListener('click', buttonSevenClick)
         return player = "playerOne"
     }
 }
@@ -138,10 +150,12 @@ function buttonEightClick(){
     if (player === "playerOne") {
         playerOneChoice.push('8')
         console.log(playerOneChoice + " player 1")
+        buttonEight.removeEventListener('click', buttonEightClick)
         return player = "playerTwo"
     } else if (player === "playerTwo") {
         playerTwoChoice.push('8')
         console.log(playerTwoChoice + " player 2")
+        buttonEight.removeEventListener('click', buttonEightClick)
         return player = "playerOne"
     }
 }
@@ -151,6 +165,7 @@ function buttonNineClick(){
     if (player === "playerOne") {
         playerOneChoice.push('9')
         console.log(playerOneChoice + " player 1")
+        buttonNine.removeEventListener('click', buttonNineClick)
         return player = "playerTwo"
     } else if (player === "playerTwo") {
         playerTwoChoice.push('9')
