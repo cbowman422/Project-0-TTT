@@ -234,6 +234,24 @@ function buttonResetClick(){
     buttonReset.addEventListener('click', buttonResetClick)
     playerOneChoice = [];
     playerTwoChoice = [];
+    document.querySelector('#button1').innerHTML = ""
+    document.querySelector('#button2').innerHTML = ""
+    document.querySelector('#button3').innerHTML = ""
+    document.querySelector('#button4').innerHTML = ""
+    document.querySelector('#button5').innerHTML = ""
+    document.querySelector('#button6').innerHTML = ""
+    document.querySelector('#button7').innerHTML = ""
+    document.querySelector('#button8').innerHTML = ""
+    document.querySelector('#button9').innerHTML = ""
+    document.querySelector('#button1').style.color = ""
+    document.querySelector('#button2').style.color = ""
+    document.querySelector('#button3').style.color = ""
+    document.querySelector('#button4').style.color = ""
+    document.querySelector('#button5').style.color = ""
+    document.querySelector('#button6').style.color = ""
+    document.querySelector('#button7').style.color = ""
+    document.querySelector('#button8').style.color = ""
+    document.querySelector('#button9').style.color = ""
     return player = "playerOne"
 }
 
@@ -290,36 +308,29 @@ function playerOneWins(){
     winner = "playerTwoWinner"
     console.log(playerOneChoice)
     console.log("player 1 wins!")
-    buttonOne.addEventListener('click', buttonOneClick)
-    buttonTwo.addEventListener('click', buttonTwoClick)
-    buttonThree.addEventListener('click', buttonThreeClick)
-    buttonFour.addEventListener('click', buttonFourClick)
-    buttonFive.addEventListener('click', buttonFiveClick)
-    buttonSix.addEventListener('click', buttonSixClick)
-    buttonSeven.addEventListener('click', buttonSevenClick)
-    buttonEight.addEventListener('click', buttonEightClick)
-    buttonNine.addEventListener('click', buttonNineClick)
-    buttonReset.addEventListener('click', buttonResetClick)
-    playerOneChoice = [];
-    playerTwoChoice = [];
+    buttonOne.removeEventListener('click', buttonOneClick)
+    buttonTwo.removeEventListener('click', buttonTwoClick)
+    buttonThree.removeEventListener('click', buttonThreeClick)
+    buttonFour.removeEventListener('click', buttonFourClick)
+    buttonFive.removeEventListener('click', buttonFiveClick)
+    buttonSix.removeEventListener('click', buttonSixClick)
+    buttonSeven.removeEventListener('click', buttonSevenClick)
+    buttonEight.removeEventListener('click', buttonEightClick)
+    buttonNine.removeEventListener('click', buttonNineClick)
 }
 
 function playerTwoWins(){
     winner = "playerTwoWinner"
     console.log(playerTwoChoice)
     console.log("player 2 wins!!")
-    buttonOne.addEventListener('click', buttonOneClick)
-    buttonTwo.addEventListener('click', buttonTwoClick)
-    buttonThree.addEventListener('click', buttonThreeClick)
-    buttonFour.addEventListener('click', buttonFourClick)
-    buttonFive.addEventListener('click', buttonFiveClick)
-    buttonSix.addEventListener('click', buttonSixClick)
-    buttonSeven.addEventListener('click', buttonSevenClick)
-    buttonEight.addEventListener('click', buttonEightClick)
-    buttonNine.addEventListener('click', buttonNineClick)
-    buttonReset.addEventListener('click', buttonResetClick)
-    playerOneChoice = [];
-    playerTwoChoice = [];
-    //return player = "playerOne"
+    buttonOne.removeEventListener('click', buttonNineClick)
+    buttonTwo.removeEventListener('click', buttonNineClick)
+    buttonThree.removeEventListener('click', buttonNineClick)
+    buttonFour.removeEventListener('click', buttonNineClick)
+    buttonFive.removeEventListener('click', buttonNineClick)
+    buttonSix.removeEventListener('click', buttonNineClick)
+    buttonSeven.removeEventListener('click', buttonNineClick)
+    buttonEight.removeEventListener('click', buttonNineClick)
+    buttonNine.removeEventListener('click', buttonNineClick)
 }
 
