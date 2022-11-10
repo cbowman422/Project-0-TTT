@@ -2,16 +2,16 @@ console.log("welcome")
 
 
 // Grabbing buttons from index.HTML and storing them in main.JS
-buttonOne = document.querySelector('#button1')
-buttonTwo = document.querySelector('#button2')
-buttonThree = document.querySelector('#button3')
-buttonFour = document.querySelector('#button4')
-buttonFive = document.querySelector('#button5')
-buttonSix = document.querySelector('#button6')
-buttonSeven = document.querySelector('#button7')
-buttonEight = document.querySelector('#button8')
-buttonNine = document.querySelector('#button9')
-buttonReset = document.querySelector('#resetButtonId')
+let buttonOne = document.querySelector('#button1')
+let buttonTwo = document.querySelector('#button2')
+let buttonThree = document.querySelector('#button3')
+let buttonFour = document.querySelector('#button4')
+let buttonFive = document.querySelector('#button5')
+let buttonSix = document.querySelector('#button6')
+let buttonSeven = document.querySelector('#button7')
+let buttonEight = document.querySelector('#button8')
+let buttonNine = document.querySelector('#button9')
+let buttonReset = document.querySelector('#resetButtonId')
 
 
 // Adding a click event listener to all of my JS stored buttons
@@ -44,10 +44,12 @@ function buttonOneClick(){
     if (player === "playerOne") {
         playerOneChoice.push('1')
         console.log(playerOneChoice + " player 1")
+        buttonOne.removeEventListener('click', buttonOneClick)
         return player = "playerTwo"
     } else if (player === "playerTwo") {
         playerTwoChoice.push('1')
         console.log(playerTwoChoice + " player 2")
+        buttonOne.removeEventListener('click', buttonOneClick)
         return player = "playerOne"
     }
 }
