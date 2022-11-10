@@ -62,12 +62,14 @@ function buttonOneClick(){
 function buttonTwoClick(){
     console.log("button 2 clicked")
     if (player === "playerOne") {
+        document.querySelector('#button2').innerHTML = " X "
         playerOneChoice.push(2)
         buttonTwo.removeEventListener('click', buttonTwoClick)
         checkWinnerOne()
         checkWinnerTwo()
         return player = "playerTwo"
     } else if (player === "playerTwo") {
+        document.querySelector('#button2').innerHTML = " O "
         playerTwoChoice.push(2)
         buttonTwo.removeEventListener('click', buttonTwoClick)
         checkWinnerOne()
@@ -79,12 +81,14 @@ function buttonTwoClick(){
 function buttonThreeClick(){
     console.log("button 3 clicked")
     if (player === "playerOne") {
+        document.querySelector('#button3').innerHTML = " X "
         playerOneChoice.push(3)
         buttonThree.removeEventListener('click', buttonThreeClick)
         checkWinnerOne()
         checkWinnerTwo()
         return player = "playerTwo"
     } else if (player === "playerTwo") {
+        document.querySelector('#button3').innerHTML = " O "
         playerTwoChoice.push(3)
         buttonThree.removeEventListener('click', buttonThreeClick)
         checkWinnerOne()
@@ -96,12 +100,14 @@ function buttonThreeClick(){
 function buttonFourClick(){
     console.log("button 4 clicked")
     if (player === "playerOne") {
+        document.querySelector('#button4').innerHTML = " X "
         playerOneChoice.push(4)
         buttonFour.removeEventListener('click', buttonFourClick)
         checkWinnerOne()
         checkWinnerTwo()
         return player = "playerTwo"
     } else if (player === "playerTwo") {
+        document.querySelector('#button4').innerHTML = " O "
         playerTwoChoice.push(4)
         buttonFour.removeEventListener('click', buttonFourClick)
         checkWinnerOne()
@@ -113,12 +119,14 @@ function buttonFourClick(){
 function buttonFiveClick(){
     console.log("button 5 clicked")
     if (player === "playerOne") {
+        document.querySelector('#button5').innerHTML = " X "
         playerOneChoice.push(5)
         buttonFive.removeEventListener('click', buttonFiveClick)
         checkWinnerOne()
         checkWinnerTwo()
         return player = "playerTwo"
     } else if (player === "playerTwo") {
+        document.querySelector('#button5').innerHTML = " O "
         playerTwoChoice.push(5)
         buttonFive.removeEventListener('click', buttonFiveClick)
         checkWinnerOne()
@@ -130,12 +138,14 @@ function buttonFiveClick(){
 function buttonSixClick(){
     console.log("button 6 clicked")
     if (player === "playerOne") {
+        document.querySelector('#button6').innerHTML = " X "
         playerOneChoice.push(6)
         buttonSix.removeEventListener('click', buttonSixClick)
         checkWinnerOne()
         checkWinnerTwo()
         return player = "playerTwo"
     } else if (player === "playerTwo") {
+        document.querySelector('#button6').innerHTML = " O "
         playerTwoChoice.push(6)
         buttonSix.removeEventListener('click', buttonSixClick)
         checkWinnerOne()
@@ -147,12 +157,14 @@ function buttonSixClick(){
 function buttonSevenClick(){
     console.log("button 7 clicked")
     if (player === "playerOne") {
+        document.querySelector('#button7').innerHTML = " X "
         playerOneChoice.push(7)
         buttonSeven.removeEventListener('click', buttonSevenClick)
         checkWinnerOne()
         checkWinnerTwo()
         return player = "playerTwo"
     } else if (player === "playerTwo") {
+        document.querySelector('#button7').innerHTML = " O "
         playerTwoChoice.push(7)
         buttonSeven.removeEventListener('click', buttonSevenClick)
         checkWinnerOne()
@@ -164,12 +176,14 @@ function buttonSevenClick(){
 function buttonEightClick(){
     console.log("button 8 clicked")
     if (player === "playerOne") {
+        document.querySelector('#button8').innerHTML = " X "
         playerOneChoice.push(8)
         buttonEight.removeEventListener('click', buttonEightClick)
         checkWinnerOne()
         checkWinnerTwo()
         return player = "playerTwo"
     } else if (player === "playerTwo") {
+        document.querySelector('#button8').innerHTML = " O "
         playerTwoChoice.push(8)
         buttonEight.removeEventListener('click', buttonEightClick)
         checkWinnerOne()
@@ -181,12 +195,14 @@ function buttonEightClick(){
 function buttonNineClick(){
     console.log("button 9 clicked")
     if (player === "playerOne") {
+        document.querySelector('#button9').innerHTML = " X "
         playerOneChoice.push(9)
         buttonNine.removeEventListener('click', buttonNineClick)
         checkWinnerOne()
         checkWinnerTwo()
         return player = "playerTwo"
     } else if (player === "playerTwo") {
+        document.querySelector('#button9').innerHTML = " O "
         playerTwoChoice.push(9)
         buttonNine.removeEventListener('click', buttonNineClick)
         checkWinnerOne()
@@ -223,15 +239,13 @@ function checkWinnerOne(){
         playerOneWins()
     } else if (playerOneChoice.includes(1) && playerOneChoice.includes(4) && playerOneChoice.includes(7)){  
         playerOneWins()
-    } else if (playerOneChoice.includes(1) && playerOneChoice.includes(4) && playerOneChoice.includes(7)){
-        playerOneWins()    
     } else if (playerOneChoice.includes(2) && playerOneChoice.includes(5) && playerOneChoice.includes(8)){
         playerOneWins()
     } else if (playerOneChoice.includes(3) && playerOneChoice.includes(6) && playerOneChoice.includes(9)){ 
         playerOneWins()
     } else if (playerOneChoice.includes(1) && playerOneChoice.includes(5) && playerOneChoice.includes(9)){          
         playerOneWins()
-    } else if (playerOneChoice.includes(2) && playerOneChoice.includes(5) && playerOneChoice.includes(8)){   
+    } else if (playerOneChoice.includes(3) && playerOneChoice.includes(5) && playerOneChoice.includes(7)){   
         playerOneWins()
     } else {
             
@@ -248,15 +262,13 @@ function checkWinnerTwo(){
         playerTwoWins()
     } else if (playerTwoChoice.includes(1) && playerTwoChoice.includes(4) && playerTwoChoice.includes(7)){
         playerTwoWins()
-    } else if (playerTwoChoice.includes(1) && playerTwoChoice.includes(4) && playerTwoChoice.includes(7)){
-        playerTwoWins()
     } else if (playerTwoChoice.includes(2) && playerTwoChoice.includes(5) && playerTwoChoice.includes(8)){
         playerTwoWins()
     } else if (playerTwoChoice.includes(3) && playerTwoChoice.includes(6) && playerTwoChoice.includes(9)){
         playerTwoWins()
     } else if (playerTwoChoice.includes(1) && playerTwoChoice.includes(5) && playerTwoChoice.includes(9)){
         playerTwoWins()
-    } else if (playerTwoChoice.includes(2) && playerTwoChoice.includes(5) && playerTwoChoice.includes(8)){
+    } else if (playerTwoChoice.includes(3) && playerTwoChoice.includes(5) && playerTwoChoice.includes(7)){
         playerTwoWins()
     } else {
         
