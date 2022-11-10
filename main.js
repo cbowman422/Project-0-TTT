@@ -199,27 +199,28 @@ function buttonResetClick(){
 
 
 function checkWinnerOne(){
-        if (playerOneChoice.includes(1) && playerOneChoice.includes(2) && playerOneChoice.includes(3)){
+    if (playerOneChoice.includes(1) && playerOneChoice.includes(2) && playerOneChoice.includes(3)){
             console.log("winner!!!")
-        } else if (playerOneChoice.includes(4) && playerOneChoice.includes(5) && playerOneChoice.includes(6)){
+            playerOneWins()
+    } else if (playerOneChoice.includes(4) && playerOneChoice.includes(5) && playerOneChoice.includes(6)){
             console.log("winner!!!")
-        } else if (playerOneChoice.includes(7) && playerOneChoice.includes(8) && playerOneChoice.includes(9)){
+    } else if (playerOneChoice.includes(7) && playerOneChoice.includes(8) && playerOneChoice.includes(9)){
             console.log("winner!!!")
-        } else if (playerOneChoice.includes(1) && playerOneChoice.includes(4) && playerOneChoice.includes(7)){
+    } else if (playerOneChoice.includes(1) && playerOneChoice.includes(4) && playerOneChoice.includes(7)){
             console.log("winner!!!")
-        } else if (playerOneChoice.includes(1) && playerOneChoice.includes(4) && playerOneChoice.includes(7)){
+    } else if (playerOneChoice.includes(1) && playerOneChoice.includes(4) && playerOneChoice.includes(7)){
             console.log("winner!!!")
-        } else if (playerOneChoice.includes(2) && playerOneChoice.includes(5) && playerOneChoice.includes(8)){
+    } else if (playerOneChoice.includes(2) && playerOneChoice.includes(5) && playerOneChoice.includes(8)){
             console.log("winner!!!")
-        } else if (playerOneChoice.includes(3) && playerOneChoice.includes(6) && playerOneChoice.includes(9)){
+    } else if (playerOneChoice.includes(3) && playerOneChoice.includes(6) && playerOneChoice.includes(9)){
             console.log("winner!!!")
-        } else if (playerOneChoice.includes(1) && playerOneChoice.includes(5) && playerOneChoice.includes(9)){
+    } else if (playerOneChoice.includes(1) && playerOneChoice.includes(5) && playerOneChoice.includes(9)){
             console.log("winner!!!")
-        } else if (playerOneChoice.includes(2) && playerOneChoice.includes(5) && playerOneChoice.includes(8)){
+    } else if (playerOneChoice.includes(2) && playerOneChoice.includes(5) && playerOneChoice.includes(8)){
             console.log("winner!!!")
-        } else {
+    } else {
             console.log("not a winner")
-        }
+    }
 }
 
 
@@ -245,4 +246,34 @@ function checkWinnerTwo(){
     } else {
         console.log("not a winner")
     }
+}
+
+function playerOneWins(){
+    buttonOne.addEventListener('click', buttonOneClick)
+    buttonTwo.addEventListener('click', buttonTwoClick)
+    buttonThree.addEventListener('click', buttonThreeClick)
+    buttonFour.addEventListener('click', buttonFourClick)
+    buttonFive.addEventListener('click', buttonFiveClick)
+    buttonSix.addEventListener('click', buttonSixClick)
+    buttonSeven.addEventListener('click', buttonSevenClick)
+    buttonEight.addEventListener('click', buttonEightClick)
+    buttonNine.addEventListener('click', buttonNineClick)
+    buttonReset.addEventListener('click', buttonResetClick)
+    playerOneChoice = [];
+    playerTwoChoice = [];
+}
+
+function playerTwoWins(){
+    buttonOne.addEventListener('click', buttonOneClick)
+    buttonTwo.addEventListener('click', buttonTwoClick)
+    buttonThree.addEventListener('click', buttonThreeClick)
+    buttonFour.addEventListener('click', buttonFourClick)
+    buttonFive.addEventListener('click', buttonFiveClick)
+    buttonSix.addEventListener('click', buttonSixClick)
+    buttonSeven.addEventListener('click', buttonSevenClick)
+    buttonEight.addEventListener('click', buttonEightClick)
+    buttonNine.addEventListener('click', buttonNineClick)
+    buttonReset.addEventListener('click', buttonResetClick)
+    playerOneChoice = [];
+    playerTwoChoice = [];
 }
