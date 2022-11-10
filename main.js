@@ -47,12 +47,14 @@ function buttonOneClick(){
       
         buttonOne.removeEventListener('click', buttonOneClick)
         checkWinnerOne()
+        checkWinnerTwo()
         return player = "playerTwo"
     } else if (player === "playerTwo") {
         playerTwoChoice.push(1)
    
         buttonOne.removeEventListener('click', buttonOneClick)
         checkWinnerOne()
+        checkWinnerTwo()
         return player = "playerOne"
     }
 }
@@ -64,12 +66,14 @@ function buttonTwoClick(){
         
         buttonTwo.removeEventListener('click', buttonTwoClick)
         checkWinnerOne()
+        checkWinnerTwo()
         return player = "playerTwo"
     } else if (player === "playerTwo") {
         playerTwoChoice.push(2)
         
         buttonTwo.removeEventListener('click', buttonTwoClick)
         checkWinnerOne()
+        checkWinnerTwo()
         return player = "playerOne"
     }
 }
@@ -81,12 +85,14 @@ function buttonThreeClick(){
     
         buttonThree.removeEventListener('click', buttonThreeClick)
         checkWinnerOne()
+        checkWinnerTwo()
         return player = "playerTwo"
     } else if (player === "playerTwo") {
         playerTwoChoice.push(3)
        
         buttonThree.removeEventListener('click', buttonThreeClick)
         checkWinnerOne()
+        checkWinnerTwo()
         return player = "playerOne"
     }
 }
@@ -98,12 +104,14 @@ function buttonFourClick(){
      
         buttonFour.removeEventListener('click', buttonFourClick)
         checkWinnerOne()
+        checkWinnerTwo()
         return player = "playerTwo"
     } else if (player === "playerTwo") {
         playerTwoChoice.push(4)
        
         buttonFour.removeEventListener('click', buttonFourClick)
         checkWinnerOne()
+        checkWinnerTwo()
         return player = "playerOne"
     }
 }
@@ -115,12 +123,14 @@ function buttonFiveClick(){
       
         buttonFive.removeEventListener('click', buttonFiveClick)
         checkWinnerOne()
+        checkWinnerTwo()
         return player = "playerTwo"
     } else if (player === "playerTwo") {
         playerTwoChoice.push(5)
       
         buttonFive.removeEventListener('click', buttonFiveClick)
         checkWinnerOne()
+        checkWinnerTwo()
         return player = "playerOne"
     }
 }
@@ -132,12 +142,14 @@ function buttonSixClick(){
 
         buttonSix.removeEventListener('click', buttonSixClick)
         checkWinnerOne()
+        checkWinnerTwo()
         return player = "playerTwo"
     } else if (player === "playerTwo") {
         playerTwoChoice.push(6)
       
         buttonSix.removeEventListener('click', buttonSixClick)
         checkWinnerOne()
+        checkWinnerTwo()
         return player = "playerOne"
     }
 }
@@ -149,12 +161,14 @@ function buttonSevenClick(){
        
         buttonSeven.removeEventListener('click', buttonSevenClick)
         checkWinnerOne()
+        checkWinnerTwo()
         return player = "playerTwo"
     } else if (player === "playerTwo") {
         playerTwoChoice.push(7)
       
         buttonSeven.removeEventListener('click', buttonSevenClick)
         checkWinnerOne()
+        checkWinnerTwo()
         return player = "playerOne"
     }
 }
@@ -166,12 +180,14 @@ function buttonEightClick(){
      
         buttonEight.removeEventListener('click', buttonEightClick)
         checkWinnerOne()
+        checkWinnerTwo()
         return player = "playerTwo"
     } else if (player === "playerTwo") {
         playerTwoChoice.push(8)
       
         buttonEight.removeEventListener('click', buttonEightClick)
         checkWinnerOne()
+        checkWinnerTwo()
         return player = "playerOne"
     }
 }
@@ -183,12 +199,14 @@ function buttonNineClick(){
         
         buttonNine.removeEventListener('click', buttonNineClick)
         checkWinnerOne()
+        checkWinnerTwo()
         return player = "playerTwo"
     } else if (player === "playerTwo") {
         playerTwoChoice.push(9)
       
         buttonNine.removeEventListener('click', buttonNineClick)
         checkWinnerOne()
+        checkWinnerTwo()
         return player = "playerOne"
     }
 }
@@ -207,10 +225,12 @@ function buttonResetClick(){
     buttonReset.addEventListener('click', buttonResetClick)
     playerOneChoice = [];
     playerTwoChoice = [];
+    return player = "playerOne"
 }
 
 
 function checkWinnerOne(){
+
     if (playerOneChoice.includes(1) && playerOneChoice.includes(2) && playerOneChoice.includes(3)){
         playerOneWins()
     } else if (playerOneChoice.includes(4) && playerOneChoice.includes(5) && playerOneChoice.includes(6)){
@@ -255,11 +275,12 @@ function checkWinnerTwo(){
     } else if (playerTwoChoice.includes(2) && playerTwoChoice.includes(5) && playerTwoChoice.includes(8)){
         playerTwoWins()
     } else {
-        console.log("not a winner")
+        
     }
 }
 
 function playerOneWins(){
+    console.log(playerOneChoice)
     console.log("player 1 wins!")
     buttonOne.addEventListener('click', buttonOneClick)
     buttonTwo.addEventListener('click', buttonTwoClick)
@@ -273,9 +294,11 @@ function playerOneWins(){
     buttonReset.addEventListener('click', buttonResetClick)
     playerOneChoice = [];
     playerTwoChoice = [];
+    return player = "playerOne"
 }
 
 function playerTwoWins(){
+    console.log(playerTwoChoice)
     console.log("player 2 wins!!")
     buttonOne.addEventListener('click', buttonOneClick)
     buttonTwo.addEventListener('click', buttonTwoClick)
@@ -289,4 +312,5 @@ function playerTwoWins(){
     buttonReset.addEventListener('click', buttonResetClick)
     playerOneChoice = [];
     playerTwoChoice = [];
+    return player = "playerOne"
 }
