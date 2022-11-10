@@ -1,5 +1,4 @@
-console.log("welcome")
-
+//console.log("welcome")
 
 // Grabbing buttons from index.HTML and storing them in main.JS
 let buttonOne = document.querySelector('#button1')
@@ -41,7 +40,7 @@ let playerTwoChoice = []
 
 // functions being called when each button is clicked
 function buttonOneClick(){
-    console.log("button 1 clicked")
+    //console.log("button 1 clicked")
     if (player === "playerOne") {
         document.querySelector('#button1').innerHTML = " X ";
         document.querySelector('#button1').style.color = "red";
@@ -49,6 +48,7 @@ function buttonOneClick(){
         buttonOne.removeEventListener('click', buttonOneClick)
         checkWinnerOne()
         checkWinnerTwo()
+        checkForTie()
         return player = "playerTwo"
     } else if (player === "playerTwo") {
         document.querySelector('#button1').innerHTML = " O "
@@ -56,12 +56,13 @@ function buttonOneClick(){
         buttonOne.removeEventListener('click', buttonOneClick)
         checkWinnerOne()
         checkWinnerTwo()
+        checkForTie()
         return player = "playerOne"
     }
 }
 
 function buttonTwoClick(){
-    console.log("button 2 clicked")
+    //console.log("button 2 clicked")
     if (player === "playerOne") {
         document.querySelector('#button2').innerHTML = " X "
         document.querySelector('#button2').style.color = "red";
@@ -69,6 +70,7 @@ function buttonTwoClick(){
         buttonTwo.removeEventListener('click', buttonTwoClick)
         checkWinnerOne()
         checkWinnerTwo()
+        checkForTie()
         return player = "playerTwo"
     } else if (player === "playerTwo") {
         document.querySelector('#button2').innerHTML = " O "
@@ -76,12 +78,13 @@ function buttonTwoClick(){
         buttonTwo.removeEventListener('click', buttonTwoClick)
         checkWinnerOne()
         checkWinnerTwo()
+        checkForTie()
         return player = "playerOne"
     }
 }
 
 function buttonThreeClick(){
-    console.log("button 3 clicked")
+    //console.log("button 3 clicked")
     if (player === "playerOne") {
         document.querySelector('#button3').innerHTML = " X "
         document.querySelector('#button3').style.color = "red";
@@ -89,6 +92,7 @@ function buttonThreeClick(){
         buttonThree.removeEventListener('click', buttonThreeClick)
         checkWinnerOne()
         checkWinnerTwo()
+        checkForTie()
         return player = "playerTwo"
     } else if (player === "playerTwo") {
         document.querySelector('#button3').innerHTML = " O "
@@ -96,12 +100,13 @@ function buttonThreeClick(){
         buttonThree.removeEventListener('click', buttonThreeClick)
         checkWinnerOne()
         checkWinnerTwo()
+        checkForTie()
         return player = "playerOne"
     }
 }
 
 function buttonFourClick(){
-    console.log("button 4 clicked")
+    //console.log("button 4 clicked")
     if (player === "playerOne") {
         document.querySelector('#button4').innerHTML = " X "
         document.querySelector('#button4').style.color = "red";
@@ -109,6 +114,7 @@ function buttonFourClick(){
         buttonFour.removeEventListener('click', buttonFourClick)
         checkWinnerOne()
         checkWinnerTwo()
+        checkForTie()
         return player = "playerTwo"
     } else if (player === "playerTwo") {
         document.querySelector('#button4').innerHTML = " O "
@@ -116,12 +122,13 @@ function buttonFourClick(){
         buttonFour.removeEventListener('click', buttonFourClick)
         checkWinnerOne()
         checkWinnerTwo()
+        checkForTie()
         return player = "playerOne"
     }
 }
 
 function buttonFiveClick(){
-    console.log("button 5 clicked")
+    //console.log("button 5 clicked")
     if (player === "playerOne") {
         document.querySelector('#button5').innerHTML = " X "
         document.querySelector('#button5').style.color = "red";
@@ -129,6 +136,7 @@ function buttonFiveClick(){
         buttonFive.removeEventListener('click', buttonFiveClick)
         checkWinnerOne()
         checkWinnerTwo()
+        checkForTie()
         return player = "playerTwo"
     } else if (player === "playerTwo") {
         document.querySelector('#button5').innerHTML = " O "
@@ -136,12 +144,13 @@ function buttonFiveClick(){
         buttonFive.removeEventListener('click', buttonFiveClick)
         checkWinnerOne()
         checkWinnerTwo()
+        checkForTie()
         return player = "playerOne"
     }
 }
 
 function buttonSixClick(){
-    console.log("button 6 clicked")
+    //console.log("button 6 clicked")
     if (player === "playerOne") {
         document.querySelector('#button6').innerHTML = " X "
         document.querySelector('#button6').style.color = "red";
@@ -149,6 +158,7 @@ function buttonSixClick(){
         buttonSix.removeEventListener('click', buttonSixClick)
         checkWinnerOne()
         checkWinnerTwo()
+        checkForTie()
         return player = "playerTwo"
     } else if (player === "playerTwo") {
         document.querySelector('#button6').innerHTML = " O "
@@ -156,12 +166,13 @@ function buttonSixClick(){
         buttonSix.removeEventListener('click', buttonSixClick)
         checkWinnerOne()
         checkWinnerTwo()
+        checkForTie()
         return player = "playerOne"
     }
 }
 
 function buttonSevenClick(){
-    console.log("button 7 clicked")
+    //console.log("button 7 clicked")
     if (player === "playerOne") {
         document.querySelector('#button7').innerHTML = " X "
         document.querySelector('#button7').style.color = "red";
@@ -169,6 +180,7 @@ function buttonSevenClick(){
         buttonSeven.removeEventListener('click', buttonSevenClick)
         checkWinnerOne()
         checkWinnerTwo()
+        checkForTie()
         return player = "playerTwo"
     } else if (player === "playerTwo") {
         document.querySelector('#button7').innerHTML = " O "
@@ -176,12 +188,13 @@ function buttonSevenClick(){
         buttonSeven.removeEventListener('click', buttonSevenClick)
         checkWinnerOne()
         checkWinnerTwo()
+        checkForTie()
         return player = "playerOne"
     }
 }
 
 function buttonEightClick(){
-    console.log("button 8 clicked")
+    //console.log("button 8 clicked")
     if (player === "playerOne") {
         document.querySelector('#button8').innerHTML = " X "
         document.querySelector('#button8').style.color = "red";
@@ -189,6 +202,7 @@ function buttonEightClick(){
         buttonEight.removeEventListener('click', buttonEightClick)
         checkWinnerOne()
         checkWinnerTwo()
+        checkForTie()
         return player = "playerTwo"
     } else if (player === "playerTwo") {
         document.querySelector('#button8').innerHTML = " O "
@@ -196,12 +210,13 @@ function buttonEightClick(){
         buttonEight.removeEventListener('click', buttonEightClick)
         checkWinnerOne()
         checkWinnerTwo()
+        checkForTie()
         return player = "playerOne"
     }
 }
 
 function buttonNineClick(){
-    console.log("button 9 clicked")
+    //console.log("button 9 clicked")
     if (player === "playerOne") {
         document.querySelector('#button9').innerHTML = " X "
         document.querySelector('#button9').style.color = "red";
@@ -209,6 +224,7 @@ function buttonNineClick(){
         buttonNine.removeEventListener('click', buttonNineClick)
         checkWinnerOne()
         checkWinnerTwo()
+        checkForTie()
         return player = "playerTwo"
     } else if (player === "playerTwo") {
         document.querySelector('#button9').innerHTML = " O "
@@ -216,6 +232,7 @@ function buttonNineClick(){
         buttonNine.removeEventListener('click', buttonNineClick)
         checkWinnerOne()
         checkWinnerTwo()
+        checkForTie()
         return player = "playerOne"
     }
 }
@@ -302,10 +319,16 @@ function checkWinnerTwo(){
     }
 }
 
-let winner = ""
+let tieFlag = 0
+function checkForTie (){
+ if (playerOneChoice.length === 5 && tieFlag === 0){
+    console.log("its a tie")
+ } else if (playerTwoChoice.length === 5 && tieFlag === 0){
+    console.log("its a tie")
+ }
+}
 
 function playerOneWins(){
-    winner = "playerTwoWinner"
     console.log(playerOneChoice)
     console.log("player 1 wins!")
     buttonOne.removeEventListener('click', buttonOneClick)
@@ -317,10 +340,10 @@ function playerOneWins(){
     buttonSeven.removeEventListener('click', buttonSevenClick)
     buttonEight.removeEventListener('click', buttonEightClick)
     buttonNine.removeEventListener('click', buttonNineClick)
+    return tieFlag = 1;
 }
 
 function playerTwoWins(){
-    winner = "playerTwoWinner"
     console.log(playerTwoChoice)
     console.log("player 2 wins!!")
     buttonOne.removeEventListener('click', buttonNineClick)
@@ -332,5 +355,6 @@ function playerTwoWins(){
     buttonSeven.removeEventListener('click', buttonNineClick)
     buttonEight.removeEventListener('click', buttonNineClick)
     buttonNine.removeEventListener('click', buttonNineClick)
+    return tieFlag = 1;
 }
 
