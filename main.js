@@ -256,7 +256,7 @@ function buttonNineClick(){
 }
 
 function buttonResetClick(){
-    console.log("reset button clicked")
+    //console.log("reset button clicked")
     document.querySelector('#playerUp').innerHTML = "Player X goes first!"
     buttonOne.addEventListener('click', buttonOneClick)
     buttonTwo.addEventListener('click', buttonTwoClick)
@@ -288,9 +288,13 @@ function buttonResetClick(){
     document.querySelector('#button7').style.color = ""
     document.querySelector('#button8').style.color = ""
     document.querySelector('#button9').style.color = ""
+    resetTieFlag()
     return player = "playerOne"
 }
 
+function resetTieFlag(){
+    return tieFlag = 0
+}
 
 function checkWinnerOne(){
 
@@ -359,6 +363,7 @@ function playerOneWins(){
     buttonSeven.removeEventListener('click', buttonSevenClick)
     buttonEight.removeEventListener('click', buttonEightClick)
     buttonNine.removeEventListener('click', buttonNineClick)
+    playerOneScore()
     return tieFlag = 1;
 }
 
@@ -374,6 +379,19 @@ function playerTwoWins(){
     buttonSeven.removeEventListener('click', buttonNineClick)
     buttonEight.removeEventListener('click', buttonNineClick)
     buttonNine.removeEventListener('click', buttonNineClick)
+    playerTwoScore()
     return tieFlag = 1;
 }
 
+scorePlayerOne = 0
+scorePlayerTwo = 0
+
+function playerOneScore(){
+    document.querySelector('#scoreX').innerHTML = "Player X Score: " + (scorePlayerOne + 1)
+    return scorePlayerOne = scorePlayerOne + 1
+}
+
+function playerTwoScore(){
+    document.querySelector('#scoreO').innerHTML = "Player O Score: " + (scorePlayerTwo + 1)
+    return scorePlayerTwo = scorePlayerTwo + 1
+    }
