@@ -12,7 +12,7 @@ let buttonEight = document.querySelector('#button8')
 let buttonNine = document.querySelector('#button9')
 let buttonReset = document.querySelector('#resetButtonId')
 // computer player
-// let buttonComputerPlayer = document.querySelector('#computerPlayerId')
+let buttonComputerPlayer = document.querySelector('#computerPlayerId')
 
 
 
@@ -28,20 +28,22 @@ buttonEight.addEventListener('click', buttonEightClick)
 buttonNine.addEventListener('click', buttonNineClick)
 buttonReset.addEventListener('click', buttonResetClick)
 // computer player
-// buttonComputerPlayer.addEventListener('click', buttonComputerPlayerClick)
+buttonComputerPlayer.addEventListener('click', buttonComputerPlayerClick)
 
 
 
 // alternate players
+let computerValueArray = [1,2,3,4,5,6,7,8,9]
 let player = "playerOne"
 let playerOneChoice = []
 let playerTwoChoice = []
-// let playerTwoComputerChoice = []
-// let computerPlayerStatus = 0;
+let playerTwoComputerChoice = []
+let computerPlayerStatus = 0;
 
-// function buttonComputerPlayerClick(){
-//     return computerPlayerStatus = 1;
-// }
+// computer - on function
+function buttonComputerPlayerClick(){
+    return computerPlayerStatus = 1;
+}
 
 // // timer
 // let sec = 0;
@@ -63,12 +65,72 @@ let playerTwoChoice = []
 
 
 
+let computerValue = 0;
+
 
 // functions being called when each button is clicked
 function buttonOneClick(){
     //timerReset()
     //console.log("button 1 clicked")
-    if (player === "playerOne") {
+    // computer player addition ----------------------
+    if (player === "playerOne" && computerPlayerStatus === 1){
+        document.querySelector('#button1').innerHTML = " X ";
+        playerOneChoice.push(1)
+        buttonOne.removeEventListener('click', buttonOneClick)
+        checkWinnerOne()
+        checkForTie()
+            for(j=0;j<computerValueArray.length;j++){
+                if (computerValueArray[j] === 1){
+                    computerValueArray.splice(j,1);
+                }
+            }
+        console.log(computerValueArray)
+        computerValue = Math.floor(Math.random() * computerValueArray.length);
+        playerTwoChoice.push(computerValueArray[computerValue])
+        checkWinnerTwo()
+            console.log(playerTwoChoice)
+        document.querySelector('#playerUp').innerHTML = "Player X's turn."
+            for (i=0;i<playerTwoChoice.length; i++){
+                   if (playerTwoChoice.includes(2)){
+                document.querySelector('#button2').innerHTML = " O "
+                buttonTwo.removeEventListener('click', buttonTwoClick)
+                    for(j=0;j<computerValueArray.length;j++){
+                        if (computerValueArray[j] === 2){
+                            computerValueArray.splice(j,1);
+                        }
+                    }
+            } else if (playerTwoChoice.includes(3)){
+                document.querySelector('#button3').innerHTML = " O "
+                buttonThree.removeEventListener('click', buttonThreeClick)
+                    for(j=0;j<computerValueArray.length;j++){
+                        if (computerValueArray[j] === 2){
+                            computerValueArray.splice(j,1);
+                        }
+                    }
+            } else if (playerTwoChoice.includes(4)){
+                document.querySelector('#button4').innerHTML = " O "
+                buttonFour.removeEventListener('click', buttonFourClick)
+            } else if (playerTwoChoice.includes(5)){
+                document.querySelector('#button5').innerHTML = " O "
+                buttonFive.removeEventListener('click', buttonFiveClick)
+            } else if (playerTwoChoice.includes(6)){
+                document.querySelector('#button6').innerHTML = " O "
+                buttonSix.removeEventListener('click', buttonSixClick)
+            } else if (playerTwoChoice.includes(7)){
+                document.querySelector('#button7').innerHTML = " O "
+                buttonSeven.removeEventListener('click', buttonSevenClick)
+            } else if (playerTwoChoice.includes(8)){
+                document.querySelector('#button8').innerHTML = " O "
+                buttonEight.removeEventListener('click', buttonEightClick)
+            } else if (playerTwoChoice.includes(9)){
+                document.querySelector('#button9').innerHTML = " O "
+                buttonNine.removeEventListener('click', buttonNineClick)
+            }}
+
+        return player = "playerOne"
+    }
+    // -----------------------------------------------
+    if (player === "playerOne" && computerPlayerStatus === 0){
         document.querySelector('#button1').innerHTML = " X ";
         //document.querySelector('#button1').style.color = "red";
         playerOneChoice.push(1)
@@ -91,8 +153,57 @@ function buttonOneClick(){
 }
 
 function buttonTwoClick(){
-    //timerReset()
-    //console.log("button 2 clicked")
+    
+//timerReset()
+//console.log("button 2 clicked")
+// computer player addition ----------------------
+if (player === "playerOne" && computerPlayerStatus === 1){
+    document.querySelector('#button2').innerHTML = " X ";
+    playerOneChoice.push(2)
+    buttonTwo.removeEventListener('click', buttonTwoClick)
+    checkWinnerOne()
+    checkForTie()
+        for(j=0;j<computerValueArray.length;j++){
+            if (computerValueArray[j] === 2){
+                computerValueArray.splice(j,1);
+            }
+        }
+    console.log(computerValueArray)
+    computerValue = Math.floor(Math.random() * computerValueArray.length);
+    playerTwoChoice.push(computerValueArray[computerValue])
+    checkWinnerTwo()
+        console.log(playerTwoChoice)
+    document.querySelector('#playerUp').innerHTML = "Player X's turn."
+        for (i=0;i<playerTwoChoice.length; i++){
+                if (playerTwoChoice.includes(2)){
+            document.querySelector('#button2').innerHTML = " O "
+            buttonTwo.removeEventListener('click', buttonTwoClick)
+        } else if (playerTwoChoice.includes(3)){
+            document.querySelector('#button3').innerHTML = " O "
+            buttonThree.removeEventListener('click', buttonThreeClick)
+        } else if (playerTwoChoice.includes(4)){
+            document.querySelector('#button4').innerHTML = " O "
+            buttonFour.removeEventListener('click', buttonFourClick)
+        } else if (playerTwoChoice.includes(5)){
+            document.querySelector('#button5').innerHTML = " O "
+            buttonFive.removeEventListener('click', buttonFiveClick)
+        } else if (playerTwoChoice.includes(6)){
+            document.querySelector('#button6').innerHTML = " O "
+            buttonSix.removeEventListener('click', buttonSixClick)
+        } else if (playerTwoChoice.includes(7)){
+            document.querySelector('#button7').innerHTML = " O "
+            buttonSeven.removeEventListener('click', buttonSevenClick)
+        } else if (playerTwoChoice.includes(8)){
+            document.querySelector('#button8').innerHTML = " O "
+            buttonEight.removeEventListener('click', buttonEightClick)
+        } else if (playerTwoChoice.includes(9)){
+            document.querySelector('#button9').innerHTML = " O "
+            buttonNine.removeEventListener('click', buttonNineClick)
+        }}
+
+    return player = "playerOne"
+}
+// -----------------------------------------------
     if (player === "playerOne") {
         document.querySelector('#button2').innerHTML = " X "
         //document.querySelector('#button2').style.color = "red";

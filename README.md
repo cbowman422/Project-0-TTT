@@ -14,3 +14,14 @@
 if 123 || 456 || 789 || 147 || 258 || 369 || 159 || 357 = X
     -player 1 wins
     -board = reset
+
+----- computer addition
+-add button 
+-when selected set a variable 
+-click 1:
+    -store 1st player value
+    -display
+    -check winner
+    -check tie
+    -generate random computer choice
+    
