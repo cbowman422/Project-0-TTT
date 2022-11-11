@@ -77,6 +77,7 @@ function buttonOneClick(){
         document.querySelector('#button1').innerHTML = " X ";
         playerOneChoice.push(1)
         buttonOne.removeEventListener('click', buttonOneClick)
+        document.querySelector('#playerUp').innerHTML = "Player X's turn."
         checkWinnerOne()
         checkForTie()
             for(j=0;j<computerValueArray.length;j++){
@@ -89,7 +90,6 @@ function buttonOneClick(){
         playerTwoChoice.push(computerValueArray[computerValue])
         checkWinnerTwo()
             console.log(playerTwoChoice + " the computers choice")
-        document.querySelector('#playerUp').innerHTML = "Player X's turn."
             for (i=0;i<playerTwoChoice.length; i++){
                    if (playerTwoChoice.includes(2)){
                 document.querySelector('#button2').innerHTML = " O "
@@ -202,6 +202,7 @@ if (player === "playerOne" && computerPlayerStatus === 1){
     document.querySelector('#button2').innerHTML = " X ";
     playerOneChoice.push(2)
     buttonTwo.removeEventListener('click', buttonTwoClick)
+    document.querySelector('#playerUp').innerHTML = "Player X's turn."
     checkWinnerOne()
     checkForTie()
         for(j=0;j<computerValueArray.length;j++){
@@ -214,7 +215,6 @@ if (player === "playerOne" && computerPlayerStatus === 1){
     playerTwoChoice.push(computerValueArray[computerValue])
     checkWinnerTwo()
         console.log(playerTwoChoice)
-    document.querySelector('#playerUp').innerHTML = "Player X's turn."
 //-------------------------------check through careful
     for (i=0;i<playerTwoChoice.length; i++){
         if (playerTwoChoice.includes(1)){
@@ -330,6 +330,7 @@ if (player === "playerOne" && computerPlayerStatus === 1){
     document.querySelector('#button3').innerHTML = " X ";
     playerOneChoice.push(3)
     buttonThree.removeEventListener('click', buttonThreeClick)
+    document.querySelector('#playerUp').innerHTML = "Player X's turn."
     checkWinnerOne()
     checkForTie()
         for(j=0;j<computerValueArray.length;j++){
@@ -342,7 +343,6 @@ if (player === "playerOne" && computerPlayerStatus === 1){
     playerTwoChoice.push(computerValueArray[computerValue])
     checkWinnerTwo()
         console.log(playerTwoChoice)
-    document.querySelector('#playerUp').innerHTML = "Player X's turn."
 //-------------------------------check through careful
     for (i=0;i<playerTwoChoice.length; i++){
         if (playerTwoChoice.includes(1)){
@@ -459,6 +459,7 @@ function buttonFourClick(){
         document.querySelector('#button4').innerHTML = " X ";
         playerOneChoice.push(4)
         buttonFour.removeEventListener('click', buttonFourClick)
+        document.querySelector('#playerUp').innerHTML = "Player X's turn."
         checkWinnerOne()
         checkForTie()
             for(j=0;j<computerValueArray.length;j++){
@@ -471,7 +472,6 @@ function buttonFourClick(){
         playerTwoChoice.push(computerValueArray[computerValue])
         checkWinnerTwo()
             console.log(playerTwoChoice)
-        document.querySelector('#playerUp').innerHTML = "Player X's turn."
     //-------------------------------check through careful
         for (i=0;i<playerTwoChoice.length; i++){
             if (playerTwoChoice.includes(1)){
@@ -590,6 +590,7 @@ function buttonFiveClick(){
         document.querySelector('#button5').innerHTML = " X ";
         playerOneChoice.push(5)
         buttonFive.removeEventListener('click', buttonFiveClick)
+        document.querySelector('#playerUp').innerHTML = "Player X's turn."
         checkWinnerOne()
         checkForTie()
             for(j=0;j<computerValueArray.length;j++){
@@ -602,7 +603,6 @@ function buttonFiveClick(){
         playerTwoChoice.push(computerValueArray[computerValue])
         checkWinnerTwo()
             console.log(playerTwoChoice)
-        document.querySelector('#playerUp').innerHTML = "Player X's turn."
     //-------------------------------check through careful
         for (i=0;i<playerTwoChoice.length; i++){
             if (playerTwoChoice.includes(1)){
@@ -719,6 +719,7 @@ function buttonSixClick(){
             document.querySelector('#button6').innerHTML = " X ";
             playerOneChoice.push(6)
             buttonSix.removeEventListener('click', buttonSixClick)
+            document.querySelector('#playerUp').innerHTML = "Player X's turn."
             checkWinnerOne()
             checkForTie()
                 for(j=0;j<computerValueArray.length;j++){
@@ -731,7 +732,6 @@ function buttonSixClick(){
             playerTwoChoice.push(computerValueArray[computerValue])
             checkWinnerTwo()
                 console.log(playerTwoChoice)
-            document.querySelector('#playerUp').innerHTML = "Player X's turn."
         //-------------------------------check through careful
             for (i=0;i<playerTwoChoice.length; i++){
                 if (playerTwoChoice.includes(1)){
@@ -848,6 +848,7 @@ function buttonSevenClick(){
                 document.querySelector('#button7').innerHTML = " X ";
                 playerOneChoice.push(7)
                 buttonSeven.removeEventListener('click', buttonSevenClick)
+                document.querySelector('#playerUp').innerHTML = "Player X's turn."
                 checkWinnerOne()
                 checkForTie()
                     for(j=0;j<computerValueArray.length;j++){
@@ -860,7 +861,6 @@ function buttonSevenClick(){
                 playerTwoChoice.push(computerValueArray[computerValue])
                 checkWinnerTwo()
                     console.log(playerTwoChoice)
-                document.querySelector('#playerUp').innerHTML = "Player X's turn."
             //-------------------------------check through careful
                 for (i=0;i<playerTwoChoice.length; i++){
                     if (playerTwoChoice.includes(1)){
@@ -975,6 +975,7 @@ function buttonEightClick(){
                     document.querySelector('#button8').innerHTML = " X ";
                     playerOneChoice.push(8)
                     buttonEight.removeEventListener('click', buttonEightClick)
+                    document.querySelector('#playerUp').innerHTML = "Player X's turn."
                     checkWinnerOne()
                     checkForTie()
                         for(j=0;j<computerValueArray.length;j++){
@@ -987,7 +988,6 @@ function buttonEightClick(){
                     playerTwoChoice.push(computerValueArray[computerValue])
                     checkWinnerTwo()
                         console.log(playerTwoChoice)
-                    document.querySelector('#playerUp').innerHTML = "Player X's turn."
                 //-------------------------------check through careful
                     for (i=0;i<playerTwoChoice.length; i++){
                         if (playerTwoChoice.includes(1)){
@@ -1100,6 +1100,7 @@ function buttonNineClick(){
             document.querySelector('#button9').innerHTML = " X ";
             playerOneChoice.push(9)
             buttonNine.removeEventListener('click', buttonNineClick)
+            document.querySelector('#playerUp').innerHTML = "Player X's turn."
             checkWinnerOne()
             checkForTie()
                 for(j=0;j<computerValueArray.length;j++){
@@ -1112,7 +1113,6 @@ function buttonNineClick(){
             playerTwoChoice.push(computerValueArray[computerValue])
             checkWinnerTwo()
                 console.log(playerTwoChoice)
-            document.querySelector('#playerUp').innerHTML = "Player X's turn."
         //-------------------------------check through careful
             for (i=0;i<playerTwoChoice.length; i++){
                 if (playerTwoChoice.includes(1)){
