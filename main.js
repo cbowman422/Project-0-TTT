@@ -50,6 +50,7 @@ function buttonOneClick(){
         checkWinnerOne()
         checkWinnerTwo()
         checkForTie()
+        timer()
         return player = "playerTwo"
     } else if (player === "playerTwo") {
         document.querySelector('#button1').innerHTML = " O "
@@ -59,6 +60,7 @@ function buttonOneClick(){
         checkWinnerOne()
         checkWinnerTwo()
         checkForTie()
+        timer()
         return player = "playerOne"
     }
 }
@@ -74,6 +76,7 @@ function buttonTwoClick(){
         checkWinnerOne()
         checkWinnerTwo()
         checkForTie()
+        timer()
         return player = "playerTwo"
     } else if (player === "playerTwo") {
         document.querySelector('#button2').innerHTML = " O "
@@ -83,6 +86,7 @@ function buttonTwoClick(){
         checkWinnerOne()
         checkWinnerTwo()
         checkForTie()
+        timer()
         return player = "playerOne"
     }
 }
@@ -395,3 +399,15 @@ function playerTwoScore(){
     document.querySelector('#scoreO').innerHTML = "Player O Score: " + (scorePlayerTwo + 1)
     return scorePlayerTwo = scorePlayerTwo + 1
     }
+
+
+function timer(){
+    let sec = 30;
+    let timer = setInterval( () => {
+    document.querySelector('#timerId').innerHTML = '00:' + sec;   
+    sec--;
+    if (sec < 0){
+        clearInterval(timer)
+    }
+}, 1000);
+}
