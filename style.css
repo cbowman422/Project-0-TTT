@@ -11,22 +11,29 @@ margin-top: 50px;
 h1 {
     color:rgb(36, 101, 151);
     font-family: 'Gaegu', sans-serif;
-    font-size: 40px;
-    margin-bottom: 2px;
+    font-size: 50px;
+    margin-bottom: 0;
+    margin-top: 24px;
     font-weight: bold;
 }
+
 h4 {
+    font-family: 'Gaegu', sans-serif;
     margin-top: 10px;
-    font
+    font-size: 24px;
 }
+
 .border {
     background-color: rgba(99, 185, 203, 0.5);
     width : 300px;
     text-align: center;
     margin: 0 auto;
     padding: 1px 0 20px 0;
+    border-radius: 3px;
 }
+
 .button {
+    font-family: sans-serif;
     background: rgb(226, 220, 195);
     height:26px; 
     width:26px;
@@ -37,42 +44,54 @@ h4 {
     
 }
 
-
 #resetButtonId {
-    margin: 20px;
+    margin: 26px 20px 20px 20px;
     background: rgb(246, 240, 215);
+    font-family: 'Gaegu', sans-serif;
+    font-size: 16px;
 }
 
 #score {
+    font-family: 'Gaegu', sans-serif;
+    font-size: 20px;
     margin: 0;
     list-style: none;
     padding: 0 0 0 5px;
+    font-weight: bold;
 }
 
 #button1 {
     border-style: none solid solid none;
 }
+
 #button2 {
     border-style: none solid solid solid;
 }
+
 #button3 {
     border-style: none none solid solid;
 }
+
 #button4 {
     border-style: solid solid solid none;
 }
+
 #button5 {
     border-style: solid solid solid solid;
 }
+
 #button6 {
     border-style: solid none solid solid;
 }
+
 #button7 {
     border-style: solid solid none none;
 }
+
 #button8 {
     border-style: solid solid none solid;
 }
+
 #button9 {
     border-style: solid none none solid;
 }

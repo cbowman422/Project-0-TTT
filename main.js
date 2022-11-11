@@ -388,7 +388,7 @@ function checkForTie (){
 
 function playerOneWins(){
     console.log(playerOneChoice)
-    document.querySelector('#playerUp').innerHTML = "Player X WINS!"
+    document.querySelector('#playerUp').innerHTML = "PLAYER X WINS!"
     buttonOne.removeEventListener('click', buttonOneClick)
     buttonTwo.removeEventListener('click', buttonTwoClick)
     buttonThree.removeEventListener('click', buttonThreeClick)
@@ -404,7 +404,7 @@ function playerOneWins(){
 
 function playerTwoWins(){
     console.log(playerTwoChoice)
-    document.querySelector('#playerUp').innerHTML = "Player O WINS!"
+    document.querySelector('#playerUp').innerHTML = "PLAYER O WINS!"
     buttonOne.removeEventListener('click', buttonNineClick)
     buttonTwo.removeEventListener('click', buttonNineClick)
     buttonThree.removeEventListener('click', buttonNineClick)
@@ -422,12 +422,12 @@ scorePlayerOne = 0
 scorePlayerTwo = 0
 
 function playerOneScore(){
-    document.querySelector('#scoreX').innerHTML = "Player X Score: " + (scorePlayerOne + 1)
+    document.querySelector('#scoreX').innerHTML = "Player X's Score: " + (scorePlayerOne + 1)
     return scorePlayerOne = scorePlayerOne + 1
 }
 
 function playerTwoScore(){
-    document.querySelector('#scoreO').innerHTML = "Player O Score: " + (scorePlayerTwo + 1)
+    document.querySelector('#scoreO').innerHTML = "Player O's Score: " + (scorePlayerTwo + 1)
     return scorePlayerTwo = scorePlayerTwo + 1
     }
 
