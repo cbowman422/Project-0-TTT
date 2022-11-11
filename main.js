@@ -13,6 +13,7 @@ let buttonNine = document.querySelector('#button9')
 let buttonReset = document.querySelector('#resetButtonId')
 
 
+
 // Adding a click event listener to all of my JS stored buttons
 buttonOne.addEventListener('click', buttonOneClick)
 buttonTwo.addEventListener('click', buttonTwoClick)
@@ -32,30 +33,36 @@ let player = "playerOne"
 let playerOneChoice = []
 let playerTwoChoice = []
 
-// timer
-let sec = 0;
-let timer = setInterval( () => {
-    document.querySelector('#timerId').innerHTML = '00:' + sec;   
-    sec--;
-    if (sec < 0){
-        console.log("game over")
-        clearInterval(timer)
-    }  
-}, 1000);
 
-// timer reset function
-function timerReset(){
-    return sec = 10;
-}
+// // timer
+// let sec = 0;
 
+
+// setInterval( () => {
+//     if(sec < 0){
+//         console.log("game over")
+//         return
+//     } 
+//     document.querySelector('#timerId').innerHTML = '00:' + sec;   
+//     sec--;
+// }, 1000);
+
+
+// // timer reset function
+// function timerReset(){
+//     return sec = 10;
+// }
+
+// function resetTimerReset (){
+//     return sec = 0;
+// }
 
 
 
 
 // functions being called when each button is clicked
 function buttonOneClick(){
-    timerReset()
-    console.log(sec + "Weeeee")
+    //timerReset()
     //console.log("button 1 clicked")
     if (player === "playerOne") {
         document.querySelector('#button1').innerHTML = " X ";
@@ -80,8 +87,7 @@ function buttonOneClick(){
 }
 
 function buttonTwoClick(){
-    timerReset()
-    console.log(sec + "Weeeeerddd")
+    //timerReset()
     //console.log("button 2 clicked")
     if (player === "playerOne") {
         document.querySelector('#button2').innerHTML = " X "
@@ -106,7 +112,7 @@ function buttonTwoClick(){
 }
 
 function buttonThreeClick(){
-    timerReset()
+    //timerReset()
     //console.log("button 3 clicked")
     if (player === "playerOne") {
         document.querySelector('#button3').innerHTML = " X "
@@ -131,7 +137,7 @@ function buttonThreeClick(){
 }
 
 function buttonFourClick(){
-    timerReset()
+    //timerReset()
     //console.log("button 4 clicked")
     if (player === "playerOne") {
         document.querySelector('#button4').innerHTML = " X "
@@ -156,7 +162,7 @@ function buttonFourClick(){
 }
 
 function buttonFiveClick(){
-    timerReset()
+    //timerReset()
     //console.log("button 5 clicked")
     if (player === "playerOne") {
         document.querySelector('#button5').innerHTML = " X "
@@ -181,7 +187,7 @@ function buttonFiveClick(){
 }
 
 function buttonSixClick(){
-    timerReset()
+    //timerReset()
     //console.log("button 6 clicked")
     if (player === "playerOne") {
         document.querySelector('#button6').innerHTML = " X "
@@ -206,7 +212,7 @@ function buttonSixClick(){
 }
 
 function buttonSevenClick(){
-    timerReset()
+    //timerReset()
     //console.log("button 7 clicked")
     if (player === "playerOne") {
         document.querySelector('#button7').innerHTML = " X "
@@ -231,7 +237,7 @@ function buttonSevenClick(){
 }
 
 function buttonEightClick(){
-    timerReset()
+   //timerReset()
     //console.log("button 8 clicked")
     if (player === "playerOne") {
         document.querySelector('#button8').innerHTML = " X "
@@ -256,7 +262,7 @@ function buttonEightClick(){
 }
 
 function buttonNineClick(){
-    timerReset()
+    //timerReset()
     //console.log("button 9 clicked")
     if (player === "playerOne") {
         document.querySelector('#button9').innerHTML = " X "
