@@ -26,20 +26,36 @@ buttonNine.addEventListener('click', buttonNineClick)
 buttonReset.addEventListener('click', buttonResetClick)
 
 
-// maybe try using 1 function for all clicked buttons
-//
-// function buttonClick(){
-//     console.log("button clicked")
-// }
 
 // alternate players
 let player = "playerOne"
 let playerOneChoice = []
 let playerTwoChoice = []
 
+// timer
+let sec = 0;
+let timer = setInterval( () => {
+    document.querySelector('#timerId').innerHTML = '00:' + sec;   
+    sec--;
+    if (sec < 0){
+        console.log("game over")
+        clearInterval(timer)
+    }  
+}, 1000);
+
+// timer reset function
+function timerReset(){
+    return sec = 10;
+}
+
+
+
+
 
 // functions being called when each button is clicked
 function buttonOneClick(){
+    timerReset()
+    console.log(sec + "Weeeee")
     //console.log("button 1 clicked")
     if (player === "playerOne") {
         document.querySelector('#button1').innerHTML = " X ";
@@ -50,7 +66,6 @@ function buttonOneClick(){
         checkWinnerOne()
         checkWinnerTwo()
         checkForTie()
-        timer()
         return player = "playerTwo"
     } else if (player === "playerTwo") {
         document.querySelector('#button1').innerHTML = " O "
@@ -60,12 +75,13 @@ function buttonOneClick(){
         checkWinnerOne()
         checkWinnerTwo()
         checkForTie()
-        timer()
         return player = "playerOne"
     }
 }
 
 function buttonTwoClick(){
+    timerReset()
+    console.log(sec + "Weeeeerddd")
     //console.log("button 2 clicked")
     if (player === "playerOne") {
         document.querySelector('#button2').innerHTML = " X "
@@ -76,7 +92,6 @@ function buttonTwoClick(){
         checkWinnerOne()
         checkWinnerTwo()
         checkForTie()
-        timer()
         return player = "playerTwo"
     } else if (player === "playerTwo") {
         document.querySelector('#button2').innerHTML = " O "
@@ -86,12 +101,12 @@ function buttonTwoClick(){
         checkWinnerOne()
         checkWinnerTwo()
         checkForTie()
-        timer()
         return player = "playerOne"
     }
 }
 
 function buttonThreeClick(){
+    timerReset()
     //console.log("button 3 clicked")
     if (player === "playerOne") {
         document.querySelector('#button3').innerHTML = " X "
@@ -116,6 +131,7 @@ function buttonThreeClick(){
 }
 
 function buttonFourClick(){
+    timerReset()
     //console.log("button 4 clicked")
     if (player === "playerOne") {
         document.querySelector('#button4').innerHTML = " X "
@@ -140,6 +156,7 @@ function buttonFourClick(){
 }
 
 function buttonFiveClick(){
+    timerReset()
     //console.log("button 5 clicked")
     if (player === "playerOne") {
         document.querySelector('#button5').innerHTML = " X "
@@ -164,6 +181,7 @@ function buttonFiveClick(){
 }
 
 function buttonSixClick(){
+    timerReset()
     //console.log("button 6 clicked")
     if (player === "playerOne") {
         document.querySelector('#button6').innerHTML = " X "
@@ -188,6 +206,7 @@ function buttonSixClick(){
 }
 
 function buttonSevenClick(){
+    timerReset()
     //console.log("button 7 clicked")
     if (player === "playerOne") {
         document.querySelector('#button7').innerHTML = " X "
@@ -212,6 +231,7 @@ function buttonSevenClick(){
 }
 
 function buttonEightClick(){
+    timerReset()
     //console.log("button 8 clicked")
     if (player === "playerOne") {
         document.querySelector('#button8').innerHTML = " X "
@@ -236,6 +256,7 @@ function buttonEightClick(){
 }
 
 function buttonNineClick(){
+    timerReset()
     //console.log("button 9 clicked")
     if (player === "playerOne") {
         document.querySelector('#button9').innerHTML = " X "
@@ -283,15 +304,15 @@ function buttonResetClick(){
     document.querySelector('#button7').innerHTML = "&nbsp;"
     document.querySelector('#button8').innerHTML = "&nbsp;"
     document.querySelector('#button9').innerHTML = "&nbsp;"
-    document.querySelector('#button1').style.color = ""
-    document.querySelector('#button2').style.color = ""
-    document.querySelector('#button3').style.color = ""
-    document.querySelector('#button4').style.color = ""
-    document.querySelector('#button5').style.color = ""
-    document.querySelector('#button6').style.color = ""
-    document.querySelector('#button7').style.color = ""
-    document.querySelector('#button8').style.color = ""
-    document.querySelector('#button9').style.color = ""
+    // document.querySelector('#button1').style.color = ""
+    // document.querySelector('#button2').style.color = ""
+    // document.querySelector('#button3').style.color = ""
+    // document.querySelector('#button4').style.color = ""
+    // document.querySelector('#button5').style.color = ""
+    // document.querySelector('#button6').style.color = ""
+    // document.querySelector('#button7').style.color = ""
+    // document.querySelector('#button8').style.color = ""
+    // document.querySelector('#button9').style.color = ""
     resetTieFlag()
     return player = "playerOne"
 }
@@ -401,13 +422,8 @@ function playerTwoScore(){
     }
 
 
-function timer(){
-    let sec = 30;
-    let timer = setInterval( () => {
-    document.querySelector('#timerId').innerHTML = '00:' + sec;   
-    sec--;
-    if (sec < 0){
-        clearInterval(timer)
-    }
-}, 1000);
-}
+
+
+
+
+
