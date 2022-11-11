@@ -11,6 +11,8 @@ let buttonSeven = document.querySelector('#button7')
 let buttonEight = document.querySelector('#button8')
 let buttonNine = document.querySelector('#button9')
 let buttonReset = document.querySelector('#resetButtonId')
+// computer player
+// let buttonComputerPlayer = document.querySelector('#computerPlayerId')
 
 
 
@@ -25,6 +27,8 @@ buttonSeven.addEventListener('click', buttonSevenClick)
 buttonEight.addEventListener('click', buttonEightClick)
 buttonNine.addEventListener('click', buttonNineClick)
 buttonReset.addEventListener('click', buttonResetClick)
+// computer player
+// buttonComputerPlayer.addEventListener('click', buttonComputerPlayerClick)
 
 
 
@@ -32,12 +36,15 @@ buttonReset.addEventListener('click', buttonResetClick)
 let player = "playerOne"
 let playerOneChoice = []
 let playerTwoChoice = []
+// let playerTwoComputerChoice = []
+// let computerPlayerStatus = 0;
 
+// function buttonComputerPlayerClick(){
+//     return computerPlayerStatus = 1;
+// }
 
 // // timer
 // let sec = 0;
-
-
 // setInterval( () => {
 //     if(sec < 0){
 //         console.log("game over")
@@ -46,13 +53,10 @@ let playerTwoChoice = []
 //     document.querySelector('#timerId').innerHTML = '00:' + sec;   
 //     sec--;
 // }, 1000);
-
-
 // // timer reset function
 // function timerReset(){
 //     return sec = 10;
 // }
-
 // function resetTimerReset (){
 //     return sec = 0;
 // }
