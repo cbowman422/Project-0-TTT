@@ -1,12 +1,23 @@
 
-h1 {
-    color:blue;
+body {
+background: url('https://imgur.com/0s1T3BF.jpg') no-repeat center center fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+margin-top: 50px;
 }
+
+h1 {
+    color:rgb(36, 101, 151);
+}
+
 .border {
-    background-color: darkgray;
-    width : 500px;
+    background-color: rgba(200,200,200,0.8);
+    width : 300px;
     text-align: center;
     margin: 0 auto;
+    padding: 1px 0 20px 0;
 }
 .button {
     background: whitesmoke;
@@ -18,6 +29,7 @@ h1 {
     font-size: 36px;
     
 }
+
 
 #resetButtonId {
     margin: 20px;
@@ -56,3 +68,4 @@ h1 {
 #button9 {
     border-style: solid none none solid;
 }
+
