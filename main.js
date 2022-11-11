@@ -46,6 +46,7 @@ function buttonOneClick(){
         document.querySelector('#button1').style.color = "red";
         playerOneChoice.push(1)
         buttonOne.removeEventListener('click', buttonOneClick)
+        document.querySelector('#playerUp').innerHTML = "Player O's turn."
         checkWinnerOne()
         checkWinnerTwo()
         checkForTie()
@@ -54,6 +55,7 @@ function buttonOneClick(){
         document.querySelector('#button1').innerHTML = " O "
         playerTwoChoice.push(1)
         buttonOne.removeEventListener('click', buttonOneClick)
+        document.querySelector('#playerUp').innerHTML = "Player X's turn."
         checkWinnerOne()
         checkWinnerTwo()
         checkForTie()
@@ -68,6 +70,7 @@ function buttonTwoClick(){
         document.querySelector('#button2').style.color = "red";
         playerOneChoice.push(2)
         buttonTwo.removeEventListener('click', buttonTwoClick)
+        document.querySelector('#playerUp').innerHTML = "Player O's turn."
         checkWinnerOne()
         checkWinnerTwo()
         checkForTie()
@@ -76,6 +79,7 @@ function buttonTwoClick(){
         document.querySelector('#button2').innerHTML = " O "
         playerTwoChoice.push(2)
         buttonTwo.removeEventListener('click', buttonTwoClick)
+        document.querySelector('#playerUp').innerHTML = "Player X's turn."
         checkWinnerOne()
         checkWinnerTwo()
         checkForTie()
@@ -90,6 +94,7 @@ function buttonThreeClick(){
         document.querySelector('#button3').style.color = "red";
         playerOneChoice.push(3)
         buttonThree.removeEventListener('click', buttonThreeClick)
+        document.querySelector('#playerUp').innerHTML = "Player O's turn."
         checkWinnerOne()
         checkWinnerTwo()
         checkForTie()
@@ -98,6 +103,7 @@ function buttonThreeClick(){
         document.querySelector('#button3').innerHTML = " O "
         playerTwoChoice.push(3)
         buttonThree.removeEventListener('click', buttonThreeClick)
+        document.querySelector('#playerUp').innerHTML = "Player X's turn."
         checkWinnerOne()
         checkWinnerTwo()
         checkForTie()
@@ -112,6 +118,7 @@ function buttonFourClick(){
         document.querySelector('#button4').style.color = "red";
         playerOneChoice.push(4)
         buttonFour.removeEventListener('click', buttonFourClick)
+        document.querySelector('#playerUp').innerHTML = "Player O's turn."
         checkWinnerOne()
         checkWinnerTwo()
         checkForTie()
@@ -120,6 +127,7 @@ function buttonFourClick(){
         document.querySelector('#button4').innerHTML = " O "
         playerTwoChoice.push(4)
         buttonFour.removeEventListener('click', buttonFourClick)
+        document.querySelector('#playerUp').innerHTML = "Player X's turn."
         checkWinnerOne()
         checkWinnerTwo()
         checkForTie()
@@ -134,6 +142,7 @@ function buttonFiveClick(){
         document.querySelector('#button5').style.color = "red";
         playerOneChoice.push(5)
         buttonFive.removeEventListener('click', buttonFiveClick)
+        document.querySelector('#playerUp').innerHTML = "Player O's turn."
         checkWinnerOne()
         checkWinnerTwo()
         checkForTie()
@@ -142,6 +151,7 @@ function buttonFiveClick(){
         document.querySelector('#button5').innerHTML = " O "
         playerTwoChoice.push(5)
         buttonFive.removeEventListener('click', buttonFiveClick)
+        document.querySelector('#playerUp').innerHTML = "Player X's turn."
         checkWinnerOne()
         checkWinnerTwo()
         checkForTie()
@@ -156,6 +166,7 @@ function buttonSixClick(){
         document.querySelector('#button6').style.color = "red";
         playerOneChoice.push(6)
         buttonSix.removeEventListener('click', buttonSixClick)
+        document.querySelector('#playerUp').innerHTML = "Player O's turn."
         checkWinnerOne()
         checkWinnerTwo()
         checkForTie()
@@ -164,6 +175,7 @@ function buttonSixClick(){
         document.querySelector('#button6').innerHTML = " O "
         playerTwoChoice.push(6)
         buttonSix.removeEventListener('click', buttonSixClick)
+        document.querySelector('#playerUp').innerHTML = "Player X's turn."
         checkWinnerOne()
         checkWinnerTwo()
         checkForTie()
@@ -178,6 +190,7 @@ function buttonSevenClick(){
         document.querySelector('#button7').style.color = "red";
         playerOneChoice.push(7)
         buttonSeven.removeEventListener('click', buttonSevenClick)
+        document.querySelector('#playerUp').innerHTML = "Player O's turn."
         checkWinnerOne()
         checkWinnerTwo()
         checkForTie()
@@ -186,6 +199,7 @@ function buttonSevenClick(){
         document.querySelector('#button7').innerHTML = " O "
         playerTwoChoice.push(7)
         buttonSeven.removeEventListener('click', buttonSevenClick)
+        document.querySelector('#playerUp').innerHTML = "Player X's turn."
         checkWinnerOne()
         checkWinnerTwo()
         checkForTie()
@@ -200,6 +214,7 @@ function buttonEightClick(){
         document.querySelector('#button8').style.color = "red";
         playerOneChoice.push(8)
         buttonEight.removeEventListener('click', buttonEightClick)
+        document.querySelector('#playerUp').innerHTML = "Player O's turn."
         checkWinnerOne()
         checkWinnerTwo()
         checkForTie()
@@ -208,6 +223,7 @@ function buttonEightClick(){
         document.querySelector('#button8').innerHTML = " O "
         playerTwoChoice.push(8)
         buttonEight.removeEventListener('click', buttonEightClick)
+        document.querySelector('#playerUp').innerHTML = "Player X's turn."
         checkWinnerOne()
         checkWinnerTwo()
         checkForTie()
@@ -222,6 +238,7 @@ function buttonNineClick(){
         document.querySelector('#button9').style.color = "red";
         playerOneChoice.push(9)
         buttonNine.removeEventListener('click', buttonNineClick)
+        document.querySelector('#playerUp').innerHTML = "Player O's turn."
         checkWinnerOne()
         checkWinnerTwo()
         checkForTie()
@@ -230,6 +247,7 @@ function buttonNineClick(){
         document.querySelector('#button9').innerHTML = " O "
         playerTwoChoice.push(9)
         buttonNine.removeEventListener('click', buttonNineClick)
+        document.querySelector('#playerUp').innerHTML = "Player X's turn."
         checkWinnerOne()
         checkWinnerTwo()
         checkForTie()
@@ -239,6 +257,7 @@ function buttonNineClick(){
 
 function buttonResetClick(){
     console.log("reset button clicked")
+    document.querySelector('#playerUp').innerHTML = "Player X goes first!"
     buttonOne.addEventListener('click', buttonOneClick)
     buttonTwo.addEventListener('click', buttonTwoClick)
     buttonThree.addEventListener('click', buttonThreeClick)
@@ -322,15 +341,15 @@ function checkWinnerTwo(){
 let tieFlag = 0
 function checkForTie (){
  if (playerOneChoice.length === 5 && tieFlag === 0){
-    console.log("its a tie")
+    document.querySelector('#playerUp').innerHTML = "It's a DRAW!"
  } else if (playerTwoChoice.length === 5 && tieFlag === 0){
-    console.log("its a tie")
+    document.querySelector('#playerUp').innerHTML = "It's a DRAW!"
  }
 }
 
 function playerOneWins(){
     console.log(playerOneChoice)
-    console.log("player 1 wins!")
+    document.querySelector('#playerUp').innerHTML = "Player X WINS!"
     buttonOne.removeEventListener('click', buttonOneClick)
     buttonTwo.removeEventListener('click', buttonTwoClick)
     buttonThree.removeEventListener('click', buttonThreeClick)
@@ -345,7 +364,7 @@ function playerOneWins(){
 
 function playerTwoWins(){
     console.log(playerTwoChoice)
-    console.log("player 2 wins!!")
+    document.querySelector('#playerUp').innerHTML = "Player O WINS!"
     buttonOne.removeEventListener('click', buttonNineClick)
     buttonTwo.removeEventListener('click', buttonNineClick)
     buttonThree.removeEventListener('click', buttonNineClick)
