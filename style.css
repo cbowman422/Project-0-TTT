@@ -6,10 +6,10 @@ h1 {
     background: whitesmoke;
     height:20px; 
     width:20px;
-    padding: 20px;
+    padding: 24px 20px 20px 20px;
     display: inline-block;
-    line-height:3;
-  
+    text-align: center;
+    
 }
 
 #resetButtonId {

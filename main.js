@@ -43,7 +43,7 @@ function buttonOneClick(){
     //console.log("button 1 clicked")
     if (player === "playerOne") {
         document.querySelector('#button1').innerHTML = " X ";
-        document.querySelector('#button1').style.color = "red";
+        //document.querySelector('#button1').style.color = "red";
         playerOneChoice.push(1)
         buttonOne.removeEventListener('click', buttonOneClick)
         document.querySelector('#playerUp').innerHTML = "Player O's turn."
@@ -67,7 +67,7 @@ function buttonTwoClick(){
     //console.log("button 2 clicked")
     if (player === "playerOne") {
         document.querySelector('#button2').innerHTML = " X "
-        document.querySelector('#button2').style.color = "red";
+        //document.querySelector('#button2').style.color = "red";
         playerOneChoice.push(2)
         buttonTwo.removeEventListener('click', buttonTwoClick)
         document.querySelector('#playerUp').innerHTML = "Player O's turn."
@@ -91,7 +91,7 @@ function buttonThreeClick(){
     //console.log("button 3 clicked")
     if (player === "playerOne") {
         document.querySelector('#button3').innerHTML = " X "
-        document.querySelector('#button3').style.color = "red";
+        //document.querySelector('#button3').style.color = "red";
         playerOneChoice.push(3)
         buttonThree.removeEventListener('click', buttonThreeClick)
         document.querySelector('#playerUp').innerHTML = "Player O's turn."
@@ -115,7 +115,7 @@ function buttonFourClick(){
     //console.log("button 4 clicked")
     if (player === "playerOne") {
         document.querySelector('#button4').innerHTML = " X "
-        document.querySelector('#button4').style.color = "red";
+        //document.querySelector('#button4').style.color = "red";
         playerOneChoice.push(4)
         buttonFour.removeEventListener('click', buttonFourClick)
         document.querySelector('#playerUp').innerHTML = "Player O's turn."
@@ -139,7 +139,7 @@ function buttonFiveClick(){
     //console.log("button 5 clicked")
     if (player === "playerOne") {
         document.querySelector('#button5').innerHTML = " X "
-        document.querySelector('#button5').style.color = "red";
+        //document.querySelector('#button5').style.color = "red";
         playerOneChoice.push(5)
         buttonFive.removeEventListener('click', buttonFiveClick)
         document.querySelector('#playerUp').innerHTML = "Player O's turn."
@@ -163,7 +163,7 @@ function buttonSixClick(){
     //console.log("button 6 clicked")
     if (player === "playerOne") {
         document.querySelector('#button6').innerHTML = " X "
-        document.querySelector('#button6').style.color = "red";
+        //document.querySelector('#button6').style.color = "red";
         playerOneChoice.push(6)
         buttonSix.removeEventListener('click', buttonSixClick)
         document.querySelector('#playerUp').innerHTML = "Player O's turn."
@@ -187,7 +187,7 @@ function buttonSevenClick(){
     //console.log("button 7 clicked")
     if (player === "playerOne") {
         document.querySelector('#button7').innerHTML = " X "
-        document.querySelector('#button7').style.color = "red";
+        //document.querySelector('#button7').style.color = "red";
         playerOneChoice.push(7)
         buttonSeven.removeEventListener('click', buttonSevenClick)
         document.querySelector('#playerUp').innerHTML = "Player O's turn."
@@ -211,7 +211,7 @@ function buttonEightClick(){
     //console.log("button 8 clicked")
     if (player === "playerOne") {
         document.querySelector('#button8').innerHTML = " X "
-        document.querySelector('#button8').style.color = "red";
+        //document.querySelector('#button8').style.color = "red";
         playerOneChoice.push(8)
         buttonEight.removeEventListener('click', buttonEightClick)
         document.querySelector('#playerUp').innerHTML = "Player O's turn."
@@ -235,7 +235,7 @@ function buttonNineClick(){
     //console.log("button 9 clicked")
     if (player === "playerOne") {
         document.querySelector('#button9').innerHTML = " X "
-        document.querySelector('#button9').style.color = "red";
+        //document.querySelector('#button9').style.color = "red";
         playerOneChoice.push(9)
         buttonNine.removeEventListener('click', buttonNineClick)
         document.querySelector('#playerUp').innerHTML = "Player O's turn."
