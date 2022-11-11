@@ -3,8 +3,14 @@ h1 {
 }
 
 .button {
-    height:100px;
-    width:100px;
+    background: whitesmoke;
+    height:20px; 
+    width:20px;
+    padding: 20px;
+    display: inline-block;
+    
+    line-height:3;
+  
 }
 
 #resetButtonId {
@@ -15,4 +21,32 @@ h1 {
     margin: 0;
     list-style: none;
     padding: 0 0 0 5px;
+}
+
+#button1 {
+    border-style: none solid solid none;
+}
+#button2 {
+    border-style: none solid solid solid;
+}
+#button3 {
+    border-style: none none solid solid;
+}
+#button4 {
+    border-style: solid solid solid none;
+}
+#button5 {
+    border-style: solid solid solid solid;
+}
+#button6 {
+    border-style: solid none solid solid;
+}
+#button7 {
+    border-style: solid solid none none;
+}
+#button8 {
+    border-style: solid solid none solid;
+}
+#button9 {
+    border-style: solid none none solid;
 }
