@@ -42,6 +42,7 @@ let computerPlayerStatus = 0;
 
 // computer - on function
 function buttonComputerPlayerClick(){
+    document.querySelector('#computerPlayerId').style.background = 'rgba(99, 185, 203, 0.5)';
     return computerPlayerStatus = 1;
 }
 
@@ -1253,6 +1254,7 @@ function buttonResetClick(){
     playerTwoChoice = []
     playerTwoComputerChoice = []
     computerPlayerStatus = 0;
+    document.querySelector('#computerPlayerId').style.background = '';
     return player = "playerOne"
 }
 
