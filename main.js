@@ -1221,6 +1221,7 @@ function buttonNineClick(){
 
 
 function buttonResetClick(){
+    resetTimerReset ()
     //console.log("reset button clicked")
     document.querySelector('#playerUp').innerHTML = "Player X goes first!"
     buttonOne.addEventListener('click', buttonOneClick)

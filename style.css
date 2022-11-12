@@ -46,13 +46,13 @@ h4 {
 }
 
 #resetButtonId {
-    margin: 26px 4px 20px 8px;
+    margin: 26px 4px 18px 8px;
     background: rgb(246, 240, 215);
     font-family: 'Gaegu', sans-serif;
     font-size: 16px;
 }
 #computerPlayerId {
-    margin: 26px 8px 20px 4px;
+    margin: 26px 8px 18px 4px;
     background: rgb(246, 240, 215);
     font-family: 'Gaegu', sans-serif;
     font-size: 16px;
@@ -103,3 +103,8 @@ h4 {
     border-style: solid none none solid;
 }
 
+#timerId {
+    margin-bottom: 6px;
+    font-family: 'Gaegu', sans-serif;
+    font-weight: bold;
+}
