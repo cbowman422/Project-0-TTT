@@ -87,82 +87,83 @@ function buttonOneClick(){
         document.querySelector('#playerUp').innerHTML = "Player X's turn."
         checkWinnerOne()
         checkForTie()
-            for(j=0;j<computerValueArray.length;j++){
-                if (computerValueArray[j] === 1){
-                    computerValueArray.splice(j,1);
-                }
-            }
-            console.log(computerValueArray + " whats left on the board")
-        computerValue = Math.floor(Math.random() * computerValueArray.length);
-        playerTwoChoice.push(computerValueArray[computerValue])
-        checkWinnerTwo()
-            console.log(playerTwoChoice + " the computers choice")
-            for (i=0;i<playerTwoChoice.length; i++){
-                   if (playerTwoChoice.includes(2)){
-                document.querySelector('#button2').innerHTML = " O "
-                buttonTwo.removeEventListener('click', buttonTwoClick)
-                    for(j=0;j<computerValueArray.length;j++){
-                        if (computerValueArray[j] === 2){
-                            computerValueArray.splice(j,1);
-                        }
-                    }
-            }  if (playerTwoChoice.includes(3)){
-                document.querySelector('#button3').innerHTML = " O "
-                buttonThree.removeEventListener('click', buttonThreeClick)
-                    for(j=0;j<computerValueArray.length;j++){
-                        if (computerValueArray[j] === 3){
-                            computerValueArray.splice(j,1);
-                        }
-                    }
-            }  if (playerTwoChoice.includes(4)){
-                document.querySelector('#button4').innerHTML = " O "
-                buttonFour.removeEventListener('click', buttonFourClick)
-                    for(j=0;j<computerValueArray.length;j++){
-                        if (computerValueArray[j] === 4){
-                            computerValueArray.splice(j,1);
-                        }
-                    }
-            }  if (playerTwoChoice.includes(5)){
-                document.querySelector('#button5').innerHTML = " O "
-                buttonFive.removeEventListener('click', buttonFiveClick)
-                    for(j=0;j<computerValueArray.length;j++){
-                        if (computerValueArray[j] === 5){
-                            computerValueArray.splice(j,1);
-                        }
-                    }
-            }  if (playerTwoChoice.includes(6)){
-                document.querySelector('#button6').innerHTML = " O "
-                buttonSix.removeEventListener('click', buttonSixClick)
-                    for(j=0;j<computerValueArray.length;j++){
-                        if (computerValueArray[j] === 6){
-                            computerValueArray.splice(j,1);
-                        }
-                    }
-            }  if (playerTwoChoice.includes(7)){
-                document.querySelector('#button7').innerHTML = " O "
-                buttonSeven.removeEventListener('click', buttonSevenClick)
-                    for(j=0;j<computerValueArray.length;j++){
-                        if (computerValueArray[j] === 7){
-                            computerValueArray.splice(j,1);
-                        }
-                    }
-            }  if (playerTwoChoice.includes(8)){
-                document.querySelector('#button8').innerHTML = " O "
-                buttonEight.removeEventListener('click', buttonEightClick)
-                    for(j=0;j<computerValueArray.length;j++){
-                        if (computerValueArray[j] === 8){
-                            computerValueArray.splice(j,1);
-                        }
-                    }
-            }  if (playerTwoChoice.includes(9)){
-                document.querySelector('#button9').innerHTML = " O "
-                buttonNine.removeEventListener('click', buttonNineClick)
-                    for(j=0;j<computerValueArray.length;j++){
-                        if (computerValueArray[j] === 9){
-                            computerValueArray.splice(j,1);
-                        }
-                    }
-            }}
+        compPlayerDelayButtonOne()
+        //     for(j=0;j<computerValueArray.length;j++){
+        //         if (computerValueArray[j] === 1){
+        //             computerValueArray.splice(j,1);
+        //         }
+        //     }
+        //     console.log(computerValueArray + " whats left on the board")
+        // computerValue = Math.floor(Math.random() * computerValueArray.length);
+        // playerTwoChoice.push(computerValueArray[computerValue])
+        // checkWinnerTwo()
+        //     console.log(playerTwoChoice + " the computers choice")
+        //     for (i=0;i<playerTwoChoice.length; i++){
+        //            if (playerTwoChoice.includes(2)){
+        //         document.querySelector('#button2').innerHTML = " O "
+        //         buttonTwo.removeEventListener('click', buttonTwoClick)
+        //             for(j=0;j<computerValueArray.length;j++){
+        //                 if (computerValueArray[j] === 2){
+        //                     computerValueArray.splice(j,1);
+        //                 }
+        //             }
+        //     }  if (playerTwoChoice.includes(3)){
+        //         document.querySelector('#button3').innerHTML = " O "
+        //         buttonThree.removeEventListener('click', buttonThreeClick)
+        //             for(j=0;j<computerValueArray.length;j++){
+        //                 if (computerValueArray[j] === 3){
+        //                     computerValueArray.splice(j,1);
+        //                 }
+        //             }
+        //     }  if (playerTwoChoice.includes(4)){
+        //         document.querySelector('#button4').innerHTML = " O "
+        //         buttonFour.removeEventListener('click', buttonFourClick)
+        //             for(j=0;j<computerValueArray.length;j++){
+        //                 if (computerValueArray[j] === 4){
+        //                     computerValueArray.splice(j,1);
+        //                 }
+        //             }
+        //     }  if (playerTwoChoice.includes(5)){
+        //         document.querySelector('#button5').innerHTML = " O "
+        //         buttonFive.removeEventListener('click', buttonFiveClick)
+        //             for(j=0;j<computerValueArray.length;j++){
+        //                 if (computerValueArray[j] === 5){
+        //                     computerValueArray.splice(j,1);
+        //                 }
+        //             }
+        //     }  if (playerTwoChoice.includes(6)){
+        //         document.querySelector('#button6').innerHTML = " O "
+        //         buttonSix.removeEventListener('click', buttonSixClick)
+        //             for(j=0;j<computerValueArray.length;j++){
+        //                 if (computerValueArray[j] === 6){
+        //                     computerValueArray.splice(j,1);
+        //                 }
+        //             }
+        //     }  if (playerTwoChoice.includes(7)){
+        //         document.querySelector('#button7').innerHTML = " O "
+        //         buttonSeven.removeEventListener('click', buttonSevenClick)
+        //             for(j=0;j<computerValueArray.length;j++){
+        //                 if (computerValueArray[j] === 7){
+        //                     computerValueArray.splice(j,1);
+        //                 }
+        //             }
+        //     }  if (playerTwoChoice.includes(8)){
+        //         document.querySelector('#button8').innerHTML = " O "
+        //         buttonEight.removeEventListener('click', buttonEightClick)
+        //             for(j=0;j<computerValueArray.length;j++){
+        //                 if (computerValueArray[j] === 8){
+        //                     computerValueArray.splice(j,1);
+        //                 }
+        //             }
+        //     }  if (playerTwoChoice.includes(9)){
+        //         document.querySelector('#button9').innerHTML = " O "
+        //         buttonNine.removeEventListener('click', buttonNineClick)
+        //             for(j=0;j<computerValueArray.length;j++){
+        //                 if (computerValueArray[j] === 9){
+        //                     computerValueArray.splice(j,1);
+        //                 }
+        //             }
+        //     }}
         console.log(computerValueArray + " whats left over after comp")
         return player = "playerOne"
     }
@@ -1404,67 +1405,162 @@ function playerTwoScore(){
 ///////// mini-max algorithm
 
 
-function checkWinnerOneMiniMax(){
+// function checkWinnerOneMiniMax(){
 
-    if (playerOneChoice.includes(1) && playerOneChoice.includes(2) && playerOneChoice.includes(3)){
-        return true;
-    } else if (playerOneChoice.includes(4) && playerOneChoice.includes(5) && playerOneChoice.includes(6)){
-        return true;
-    } else if (playerOneChoice.includes(7) && playerOneChoice.includes(8) && playerOneChoice.includes(9)){
-        return true;
-    } else if (playerOneChoice.includes(1) && playerOneChoice.includes(4) && playerOneChoice.includes(7)){  
-        return true;
-    } else if (playerOneChoice.includes(2) && playerOneChoice.includes(5) && playerOneChoice.includes(8)){
-        return true;
-    } else if (playerOneChoice.includes(3) && playerOneChoice.includes(6) && playerOneChoice.includes(9)){ 
-        return true;
-    } else if (playerOneChoice.includes(1) && playerOneChoice.includes(5) && playerOneChoice.includes(9)){          
-        return true;
-    } else if (playerOneChoice.includes(3) && playerOneChoice.includes(5) && playerOneChoice.includes(7)){   
-        return true;
-    } else { 
-        return false;
+//     if (playerOneChoice.includes(1) && playerOneChoice.includes(2) && playerOneChoice.includes(3)){
+//         return true;
+//     } else if (playerOneChoice.includes(4) && playerOneChoice.includes(5) && playerOneChoice.includes(6)){
+//         return true;
+//     } else if (playerOneChoice.includes(7) && playerOneChoice.includes(8) && playerOneChoice.includes(9)){
+//         return true;
+//     } else if (playerOneChoice.includes(1) && playerOneChoice.includes(4) && playerOneChoice.includes(7)){  
+//         return true;
+//     } else if (playerOneChoice.includes(2) && playerOneChoice.includes(5) && playerOneChoice.includes(8)){
+//         return true;
+//     } else if (playerOneChoice.includes(3) && playerOneChoice.includes(6) && playerOneChoice.includes(9)){ 
+//         return true;
+//     } else if (playerOneChoice.includes(1) && playerOneChoice.includes(5) && playerOneChoice.includes(9)){          
+//         return true;
+//     } else if (playerOneChoice.includes(3) && playerOneChoice.includes(5) && playerOneChoice.includes(7)){   
+//         return true;
+//     } else { 
+//         return false;
             
-    }
-}
+//     }
+// }
 
-function checkWinnerTwoMiniMax(){
-    if (playerTwoChoice.includes(1) && playerTwoChoice.includes(2) && playerTwoChoice.includes(3)){
-        return true;
-    } else if (playerTwoChoice.includes(4) && playerTwoChoice.includes(5) && playerTwoChoice.includes(6)){
-        return true;
-    } else if (playerTwoChoice.includes(7) && playerTwoChoice.includes(8) && playerTwoChoice.includes(9)){
-        return true;
-    } else if (playerTwoChoice.includes(1) && playerTwoChoice.includes(4) && playerTwoChoice.includes(7)){
-        return true;
-    } else if (playerTwoChoice.includes(2) && playerTwoChoice.includes(5) && playerTwoChoice.includes(8)){
-        return true;
-    } else if (playerTwoChoice.includes(3) && playerTwoChoice.includes(6) && playerTwoChoice.includes(9)){
-        return true;
-    } else if (playerTwoChoice.includes(1) && playerTwoChoice.includes(5) && playerTwoChoice.includes(9)){
-        return true;
-    } else if (playerTwoChoice.includes(3) && playerTwoChoice.includes(5) && playerTwoChoice.includes(7)){
-        return true;
-    } else {
-        return false;
+// function checkWinnerTwoMiniMax(){
+//     if (playerTwoChoice.includes(1) && playerTwoChoice.includes(2) && playerTwoChoice.includes(3)){
+//         return true;
+//     } else if (playerTwoChoice.includes(4) && playerTwoChoice.includes(5) && playerTwoChoice.includes(6)){
+//         return true;
+//     } else if (playerTwoChoice.includes(7) && playerTwoChoice.includes(8) && playerTwoChoice.includes(9)){
+//         return true;
+//     } else if (playerTwoChoice.includes(1) && playerTwoChoice.includes(4) && playerTwoChoice.includes(7)){
+//         return true;
+//     } else if (playerTwoChoice.includes(2) && playerTwoChoice.includes(5) && playerTwoChoice.includes(8)){
+//         return true;
+//     } else if (playerTwoChoice.includes(3) && playerTwoChoice.includes(6) && playerTwoChoice.includes(9)){
+//         return true;
+//     } else if (playerTwoChoice.includes(1) && playerTwoChoice.includes(5) && playerTwoChoice.includes(9)){
+//         return true;
+//     } else if (playerTwoChoice.includes(3) && playerTwoChoice.includes(5) && playerTwoChoice.includes(7)){
+//         return true;
+//     } else {
+//         return false;
         
-    }
-}
+//     }
+// }
 
 
-let score = -Infinity
+// function checkForTieMiniMax (){
+//     if (playerOneChoice.length === 5 && tieFlag === 0){
+//        return true;
+//     } else if (playerTwoChoice.length === 5 && tieFlag === 0){
+//        return true;
+//     } else {
+//         return false;
+//     }
+//    }
+   
 
-function miniMax(){
+// let score = -Infinity
 
-    if (checkWinnerOneMiniMax()) {
-        return score = -1;
-    } 
-    else if (checkWinnerTwoMiniMax()){
-        return score = 1;
-    } 
-    else if (computerValueArray.length === 0 && tieFlag === 0){
-        return score = 0;
-    }
+// function miniMax(){
 
-console.log(score)
+//     if (checkWinnerOneMiniMax()) {
+//         return score = -1;
+//     } 
+//     else if (checkWinnerTwoMiniMax()){
+//         return score = 1;
+//     } 
+//     else if (checkForTieMiniMax()){
+//         return score = 0;
+//     }
+
+// console.log(score)
+// }
+
+
+function compPlayerDelayButtonOne(){
+let delay = setInterval( () => {
+        console.log("comp delay")
+        for(j=0;j<computerValueArray.length;j++){
+            if (computerValueArray[j] === 1){
+                computerValueArray.splice(j,1);
+            }
+        }
+        console.log(computerValueArray + " whats left on the board")
+    computerValue = Math.floor(Math.random() * computerValueArray.length);
+    playerTwoChoice.push(computerValueArray[computerValue])
+    checkWinnerTwo()
+        console.log(playerTwoChoice + " the computers choice")
+        for (i=0;i<playerTwoChoice.length; i++){
+               if (playerTwoChoice.includes(2)){
+            document.querySelector('#button2').innerHTML = " O "
+            buttonTwo.removeEventListener('click', buttonTwoClick)
+                for(j=0;j<computerValueArray.length;j++){
+                    if (computerValueArray[j] === 2){
+                        computerValueArray.splice(j,1);
+                    }
+                }
+        }  if (playerTwoChoice.includes(3)){
+            document.querySelector('#button3').innerHTML = " O "
+            buttonThree.removeEventListener('click', buttonThreeClick)
+                for(j=0;j<computerValueArray.length;j++){
+                    if (computerValueArray[j] === 3){
+                        computerValueArray.splice(j,1);
+                    }
+                }
+        }  if (playerTwoChoice.includes(4)){
+            document.querySelector('#button4').innerHTML = " O "
+            buttonFour.removeEventListener('click', buttonFourClick)
+                for(j=0;j<computerValueArray.length;j++){
+                    if (computerValueArray[j] === 4){
+                        computerValueArray.splice(j,1);
+                    }
+                }
+        }  if (playerTwoChoice.includes(5)){
+            document.querySelector('#button5').innerHTML = " O "
+            buttonFive.removeEventListener('click', buttonFiveClick)
+                for(j=0;j<computerValueArray.length;j++){
+                    if (computerValueArray[j] === 5){
+                        computerValueArray.splice(j,1);
+                    }
+                }
+        }  if (playerTwoChoice.includes(6)){
+            document.querySelector('#button6').innerHTML = " O "
+            buttonSix.removeEventListener('click', buttonSixClick)
+                for(j=0;j<computerValueArray.length;j++){
+                    if (computerValueArray[j] === 6){
+                        computerValueArray.splice(j,1);
+                    }
+                }
+        }  if (playerTwoChoice.includes(7)){
+            document.querySelector('#button7').innerHTML = " O "
+            buttonSeven.removeEventListener('click', buttonSevenClick)
+                for(j=0;j<computerValueArray.length;j++){
+                    if (computerValueArray[j] === 7){
+                        computerValueArray.splice(j,1);
+                    }
+                }
+        }  if (playerTwoChoice.includes(8)){
+            document.querySelector('#button8').innerHTML = " O "
+            buttonEight.removeEventListener('click', buttonEightClick)
+                for(j=0;j<computerValueArray.length;j++){
+                    if (computerValueArray[j] === 8){
+                        computerValueArray.splice(j,1);
+                    }
+                }
+        }  if (playerTwoChoice.includes(9)){
+            document.querySelector('#button9').innerHTML = " O "
+            buttonNine.removeEventListener('click', buttonNineClick)
+                for(j=0;j<computerValueArray.length;j++){
+                    if (computerValueArray[j] === 9){
+                        computerValueArray.splice(j,1);
+                    }
+                }
+        }}
+        return clearInterval(delay)
+}, 3000);
 }
