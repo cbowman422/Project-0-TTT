@@ -46,24 +46,26 @@ function buttonComputerPlayerClick(){
     return computerPlayerStatus = 1;
 }
 
-// // timer
-// let sec = 0;
-// setInterval( () => {
-//     if(sec < 0){
-//         console.log("game over")
-//         return
-//     } 
-//     document.querySelector('#timerId').innerHTML = '00:' + sec;   
-//     sec--;
-// }, 1000);
-// // timer reset function
-// function timerReset(){
-//     return sec = 10;
-// }
-// function resetTimerReset (){
-//     return sec = 0;
-// }
 
+// timer
+let sec = 0;
+let timer = setInterval( () => {
+    if(sec < 0){
+        console.log("game over")
+        return clearInterval(timer)
+        //would think to add the innerHTML for random choice here but this is also my skip
+    } 
+    document.querySelector('#timerId').innerHTML = '00:' + sec;   
+    sec--;
+}, 1000);
+// timer reset function
+function timerReset(){
+    return sec = 10;
+}
+function resetTimerReset (){
+    return sec = 0;
+}
+// if i reset it how do i clear the interval for reset so that i dont have it adding characters every time it reaches 0. since its currently hanging at 0 every second.
 
 
 let computerValue = 0;
@@ -71,7 +73,7 @@ let computerValue = 0;
 
 // functions being called when each button is clicked
 function buttonOneClick(){
-    //timerReset()
+    timerReset()
     //console.log("button 1 clicked")
     // computer player addition ----------------------
     if (player === "playerOne" && computerPlayerStatus === 1){
@@ -196,7 +198,7 @@ function buttonOneClick(){
 
 function buttonTwoClick(){
     
-//timerReset()
+timerReset()
 //console.log("button 2 clicked")
 // computer player addition ----------------------
 if (player === "playerOne" && computerPlayerStatus === 1){
@@ -323,7 +325,7 @@ if (player === "playerOne" && computerPlayerStatus === 1){
 
 
 function buttonThreeClick(){
-    //timerReset()
+    timerReset()
     //console.log("button 3 clicked")
 
     // computer player addition ----------------------
@@ -452,7 +454,7 @@ if (player === "playerOne" && computerPlayerStatus === 1){
 
 
 function buttonFourClick(){
-    //timerReset()
+    timerReset()
     //console.log("button 4 clicked")
 
     // computer player addition ----------------------
@@ -582,7 +584,7 @@ function buttonFourClick(){
 
 
 function buttonFiveClick(){
-    //timerReset()
+    timerReset()
     //console.log("button 5 clicked")
 
 
@@ -713,7 +715,7 @@ function buttonFiveClick(){
 
 
 function buttonSixClick(){
-    //timerReset()
+    timerReset()
     //console.log("button 6 clicked")
           // computer player addition ----------------------
           if (player === "playerOne" && computerPlayerStatus === 1){
@@ -842,7 +844,7 @@ function buttonSixClick(){
 
 
 function buttonSevenClick(){
-    //timerReset()
+    timerReset()
     //console.log("button 7 clicked")
               // computer player addition ----------------------
               if (player === "playerOne" && computerPlayerStatus === 1){
@@ -969,7 +971,7 @@ function buttonSevenClick(){
 
 
 function buttonEightClick(){
-   //timerReset()
+   timerReset()
     //console.log("button 8 clicked")
                   // computer player addition ----------------------
                   if (player === "playerOne" && computerPlayerStatus === 1){
@@ -1094,7 +1096,7 @@ function buttonEightClick(){
 
 
 function buttonNineClick(){
-    //timerReset()
+    timerReset()
     //console.log("button 9 clicked")
             // computer player addition ----------------------
             if (player === "playerOne" && computerPlayerStatus === 1){
@@ -1336,14 +1338,14 @@ function playerOneWins(){
 function playerTwoWins(){
     console.log(playerTwoChoice)
     document.querySelector('#playerUp').innerHTML = "PLAYER O WINS!"
-    buttonOne.removeEventListener('click', buttonNineClick)
-    buttonTwo.removeEventListener('click', buttonNineClick)
-    buttonThree.removeEventListener('click', buttonNineClick)
-    buttonFour.removeEventListener('click', buttonNineClick)
-    buttonFive.removeEventListener('click', buttonNineClick)
-    buttonSix.removeEventListener('click', buttonNineClick)
-    buttonSeven.removeEventListener('click', buttonNineClick)
-    buttonEight.removeEventListener('click', buttonNineClick)
+    buttonOne.removeEventListener('click', buttonOneClick)
+    buttonTwo.removeEventListener('click', buttonTwoClick)
+    buttonThree.removeEventListener('click', buttonThreeClick)
+    buttonFour.removeEventListener('click', buttonFourClick)
+    buttonFive.removeEventListener('click', buttonFiveClick)
+    buttonSix.removeEventListener('click', buttonSixClick)
+    buttonSeven.removeEventListener('click', buttonSevenClick)
+    buttonEight.removeEventListener('click', buttonEightClick)
     buttonNine.removeEventListener('click', buttonNineClick)
     playerTwoScore()
     return tieFlag = 1;
@@ -1366,5 +1368,28 @@ function playerTwoScore(){
 
 
 
+
+   start.addEventListener('click', timerFunction)
+   end.addEventListener('click', endTimerFunction)
+
+   function timerFunction(){
+        sec = 10
+        timer = setInterval( () => {
+    document.querySelector('#Id').innerHTML = '00:' + sec;
+    sec--;
+        if (sec < 0){
+        clearInterval(timer)
+     } 
+         if (endTimerClickFunction){
+        clearInterval(timer)
+    }
+   }, 1000)
+
+   }
+
+
+function endTimerFunction(){
+       endTimerOnClickFunction()
+}
 
 
