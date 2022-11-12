@@ -51,8 +51,9 @@ function buttonComputerPlayerClick(){
 let sec = 0;
 let timer = setInterval( () => {
     if(sec < 0){
-        console.log("game over")
-        return clearInterval(timer)
+        console.log("stalling")
+        return
+        //return clearInterval(timer)
         //would think to add the innerHTML for random choice here but this is also my skip
     } 
     document.querySelector('#timerId').innerHTML = '00:' + sec;   
@@ -1369,27 +1370,27 @@ function playerTwoScore(){
 
 
 
-   start.addEventListener('click', timerFunction)
-   end.addEventListener('click', endTimerFunction)
+//    start.addEventListener('click', timerFunction)
+//    end.addEventListener('click', endTimerFunction)
 
-   function timerFunction(){
-        sec = 10
-        timer = setInterval( () => {
-    document.querySelector('#Id').innerHTML = '00:' + sec;
-    sec--;
-        if (sec < 0){
-        clearInterval(timer)
-     } 
-         if (endTimerClickFunction){
-        clearInterval(timer)
-    }
-   }, 1000)
+//    function timerFunction(){
+//         sec = 10
+//         timer = setInterval( () => {
+//     document.querySelector('#Id').innerHTML = '00:' + sec;
+//     sec--;
+//         if (sec < 0){
+//         clearInterval(timer)
+//      } 
+//          if (endTimerClickFunction){
+//         clearInterval(timer)
+//     }
+//    }, 1000)
 
-   }
+//    }
 
 
-function endTimerFunction(){
-       endTimerOnClickFunction()
-}
+// function endTimerFunction(){
+//        endTimerOnClickFunction()
+// }
 
 
