@@ -222,7 +222,7 @@ if (player === "playerOne" && computerPlayerStatus === 1){
     playerTwoChoice.push(computerValueArray[computerValue])
     checkWinnerTwo()
         console.log(playerTwoChoice)
-//-------------------------------check through careful
+//-------------------------------
     for (i=0;i<playerTwoChoice.length; i++){
         if (playerTwoChoice.includes(1)){
         document.querySelector('#button1').innerHTML = " O "
@@ -350,7 +350,7 @@ if (player === "playerOne" && computerPlayerStatus === 1){
     playerTwoChoice.push(computerValueArray[computerValue])
     checkWinnerTwo()
         console.log(playerTwoChoice)
-//-------------------------------check through careful
+//-------------------------------
     for (i=0;i<playerTwoChoice.length; i++){
         if (playerTwoChoice.includes(1)){
         document.querySelector('#button1').innerHTML = " O "
@@ -479,7 +479,7 @@ function buttonFourClick(){
         playerTwoChoice.push(computerValueArray[computerValue])
         checkWinnerTwo()
             console.log(playerTwoChoice)
-    //-------------------------------check through careful
+    //-------------------------------
         for (i=0;i<playerTwoChoice.length; i++){
             if (playerTwoChoice.includes(1)){
             document.querySelector('#button1').innerHTML = " O "
@@ -610,7 +610,7 @@ function buttonFiveClick(){
         playerTwoChoice.push(computerValueArray[computerValue])
         checkWinnerTwo()
             console.log(playerTwoChoice)
-    //-------------------------------check through careful
+    //-------------------------------
         for (i=0;i<playerTwoChoice.length; i++){
             if (playerTwoChoice.includes(1)){
             document.querySelector('#button1').innerHTML = " O "
@@ -739,7 +739,7 @@ function buttonSixClick(){
             playerTwoChoice.push(computerValueArray[computerValue])
             checkWinnerTwo()
                 console.log(playerTwoChoice)
-        //-------------------------------check through careful
+        //-------------------------------
             for (i=0;i<playerTwoChoice.length; i++){
                 if (playerTwoChoice.includes(1)){
                 document.querySelector('#button1').innerHTML = " O "
@@ -868,7 +868,7 @@ function buttonSevenClick(){
                 playerTwoChoice.push(computerValueArray[computerValue])
                 checkWinnerTwo()
                     console.log(playerTwoChoice)
-            //-------------------------------check through careful
+            //-------------------------------
                 for (i=0;i<playerTwoChoice.length; i++){
                     if (playerTwoChoice.includes(1)){
                     document.querySelector('#button1').innerHTML = " O "
@@ -995,7 +995,7 @@ function buttonEightClick(){
                     playerTwoChoice.push(computerValueArray[computerValue])
                     checkWinnerTwo()
                         console.log(playerTwoChoice)
-                //-------------------------------check through careful
+                //-------------------------------
                     for (i=0;i<playerTwoChoice.length; i++){
                         if (playerTwoChoice.includes(1)){
                         document.querySelector('#button1').innerHTML = " O "
@@ -1120,7 +1120,7 @@ function buttonNineClick(){
             playerTwoChoice.push(computerValueArray[computerValue])
             checkWinnerTwo()
                 console.log(playerTwoChoice)
-        //-------------------------------check through careful
+        //-------------------------------
             for (i=0;i<playerTwoChoice.length; i++){
                 if (playerTwoChoice.includes(1)){
                 document.querySelector('#button1').innerHTML = " O "
@@ -1269,6 +1269,7 @@ function resetTieFlag(){
     return tieFlag = 0
 }
 
+
 function checkWinnerOne(){
 
     if (playerOneChoice.includes(1) && playerOneChoice.includes(2) && playerOneChoice.includes(3)){
@@ -1400,3 +1401,70 @@ function playerTwoScore(){
 // }
 
 
+///////// mini-max algorithm
+
+
+function checkWinnerOneMiniMax(){
+
+    if (playerOneChoice.includes(1) && playerOneChoice.includes(2) && playerOneChoice.includes(3)){
+        return true;
+    } else if (playerOneChoice.includes(4) && playerOneChoice.includes(5) && playerOneChoice.includes(6)){
+        return true;
+    } else if (playerOneChoice.includes(7) && playerOneChoice.includes(8) && playerOneChoice.includes(9)){
+        return true;
+    } else if (playerOneChoice.includes(1) && playerOneChoice.includes(4) && playerOneChoice.includes(7)){  
+        return true;
+    } else if (playerOneChoice.includes(2) && playerOneChoice.includes(5) && playerOneChoice.includes(8)){
+        return true;
+    } else if (playerOneChoice.includes(3) && playerOneChoice.includes(6) && playerOneChoice.includes(9)){ 
+        return true;
+    } else if (playerOneChoice.includes(1) && playerOneChoice.includes(5) && playerOneChoice.includes(9)){          
+        return true;
+    } else if (playerOneChoice.includes(3) && playerOneChoice.includes(5) && playerOneChoice.includes(7)){   
+        return true;
+    } else { 
+        return false;
+            
+    }
+}
+
+function checkWinnerTwoMiniMax(){
+    if (playerTwoChoice.includes(1) && playerTwoChoice.includes(2) && playerTwoChoice.includes(3)){
+        return true;
+    } else if (playerTwoChoice.includes(4) && playerTwoChoice.includes(5) && playerTwoChoice.includes(6)){
+        return true;
+    } else if (playerTwoChoice.includes(7) && playerTwoChoice.includes(8) && playerTwoChoice.includes(9)){
+        return true;
+    } else if (playerTwoChoice.includes(1) && playerTwoChoice.includes(4) && playerTwoChoice.includes(7)){
+        return true;
+    } else if (playerTwoChoice.includes(2) && playerTwoChoice.includes(5) && playerTwoChoice.includes(8)){
+        return true;
+    } else if (playerTwoChoice.includes(3) && playerTwoChoice.includes(6) && playerTwoChoice.includes(9)){
+        return true;
+    } else if (playerTwoChoice.includes(1) && playerTwoChoice.includes(5) && playerTwoChoice.includes(9)){
+        return true;
+    } else if (playerTwoChoice.includes(3) && playerTwoChoice.includes(5) && playerTwoChoice.includes(7)){
+        return true;
+    } else {
+        return false;
+        
+    }
+}
+
+
+let score = -Infinity
+
+function miniMax(){
+
+    if (checkWinnerOneMiniMax()) {
+        return score = -1;
+    } 
+    else if (checkWinnerTwoMiniMax()){
+        return score = 1;
+    } 
+    else if (computerValueArray.length === 0 && tieFlag === 0){
+        return score = 0;
+    }
+
+console.log(score)
+}
