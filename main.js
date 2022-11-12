@@ -59,11 +59,14 @@ let timer = setInterval( () => {
     document.querySelector('#timerId').innerHTML = '00:' + sec;   
     sec--;
 }, 1000);
+
+
 // timer reset function
 function timerReset(){
     return sec = 10;
 }
-function resetTimerReset (){
+
+function resetTimerReset(){
     return sec = 0;
 }
 // if i reset it how do i clear the interval for reset so that i dont have it adding characters every time it reaches 0. since its currently hanging at 0 every second.
@@ -1322,6 +1325,7 @@ function checkForTie (){
 }
 
 function playerOneWins(){
+    resetTimerReset()
     console.log(playerOneChoice)
     document.querySelector('#playerUp').innerHTML = "PLAYER X WINS!"
     buttonOne.removeEventListener('click', buttonOneClick)
@@ -1338,6 +1342,7 @@ function playerOneWins(){
 }
 
 function playerTwoWins(){
+    resetTimerReset()
     console.log(playerTwoChoice)
     document.querySelector('#playerUp').innerHTML = "PLAYER O WINS!"
     buttonOne.removeEventListener('click', buttonOneClick)
