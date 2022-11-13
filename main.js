@@ -491,7 +491,6 @@ function checkWinnerOne(){
     } else if (playerOneChoice.includes(3) && playerOneChoice.includes(5) && playerOneChoice.includes(7)){   
         playerOneWins()
     } else {
-            
     }
 }
 
@@ -516,7 +515,6 @@ function checkWinnerTwo(){
     } else if (playerTwoChoice.includes(3) && playerTwoChoice.includes(5) && playerTwoChoice.includes(7)){
         playerTwoWins()
     } else {
-        
     }
 }
 
@@ -1426,80 +1424,146 @@ function compPlayerDelayButtonNine(){
 
 
 
-// mini-max algorithm --------------------
-
-// function checkWinnerOneMiniMax(){
-
-//     if (playerOneChoice.includes(1) && playerOneChoice.includes(2) && playerOneChoice.includes(3)){
-//         return true;
-//     } else if (playerOneChoice.includes(4) && playerOneChoice.includes(5) && playerOneChoice.includes(6)){
-//         return true;
-//     } else if (playerOneChoice.includes(7) && playerOneChoice.includes(8) && playerOneChoice.includes(9)){
-//         return true;
-//     } else if (playerOneChoice.includes(1) && playerOneChoice.includes(4) && playerOneChoice.includes(7)){  
-//         return true;
-//     } else if (playerOneChoice.includes(2) && playerOneChoice.includes(5) && playerOneChoice.includes(8)){
-//         return true;
-//     } else if (playerOneChoice.includes(3) && playerOneChoice.includes(6) && playerOneChoice.includes(9)){ 
-//         return true;
-//     } else if (playerOneChoice.includes(1) && playerOneChoice.includes(5) && playerOneChoice.includes(9)){          
-//         return true;
-//     } else if (playerOneChoice.includes(3) && playerOneChoice.includes(5) && playerOneChoice.includes(7)){   
-//         return true;
-//     } else { 
-//         return false;
-            
-//     }
-// }
-
-// function checkWinnerTwoMiniMax(){
-//     if (playerTwoChoice.includes(1) && playerTwoChoice.includes(2) && playerTwoChoice.includes(3)){
-//         return true;
-//     } else if (playerTwoChoice.includes(4) && playerTwoChoice.includes(5) && playerTwoChoice.includes(6)){
-//         return true;
-//     } else if (playerTwoChoice.includes(7) && playerTwoChoice.includes(8) && playerTwoChoice.includes(9)){
-//         return true;
-//     } else if (playerTwoChoice.includes(1) && playerTwoChoice.includes(4) && playerTwoChoice.includes(7)){
-//         return true;
-//     } else if (playerTwoChoice.includes(2) && playerTwoChoice.includes(5) && playerTwoChoice.includes(8)){
-//         return true;
-//     } else if (playerTwoChoice.includes(3) && playerTwoChoice.includes(6) && playerTwoChoice.includes(9)){
-//         return true;
-//     } else if (playerTwoChoice.includes(1) && playerTwoChoice.includes(5) && playerTwoChoice.includes(9)){
-//         return true;
-//     } else if (playerTwoChoice.includes(3) && playerTwoChoice.includes(5) && playerTwoChoice.includes(7)){
-//         return true;
-//     } else {
-//         return false;
-        
-//     }
-// }
+// --------mini-max algorithm --------------------------------
 
 
-// function checkForTieMiniMax (){
-//     if (playerOneChoice.length === 5 && tieFlag === 0){
-//        return true;
-//     } else if (playerTwoChoice.length === 5 && tieFlag === 0){
-//        return true;
-//     } else {
-//         return false;
-//     }
-//    }
+// global variables
+    let score = -Infinity
+
+
+
+// function checking winner player 1 returning true or false
+function checkWinnerOneMiniMax(){
+    if (playerOneChoice.includes(1) && playerOneChoice.includes(2) && playerOneChoice.includes(3)){
+        return true;
+    } else if (playerOneChoice.includes(4) && playerOneChoice.includes(5) && playerOneChoice.includes(6)){
+        return true;
+    } else if (playerOneChoice.includes(7) && playerOneChoice.includes(8) && playerOneChoice.includes(9)){
+        return true;
+    } else if (playerOneChoice.includes(1) && playerOneChoice.includes(4) && playerOneChoice.includes(7)){  
+        return true;
+    } else if (playerOneChoice.includes(2) && playerOneChoice.includes(5) && playerOneChoice.includes(8)){
+        return true;
+    } else if (playerOneChoice.includes(3) && playerOneChoice.includes(6) && playerOneChoice.includes(9)){ 
+        return true;
+    } else if (playerOneChoice.includes(1) && playerOneChoice.includes(5) && playerOneChoice.includes(9)){          
+        return true;
+    } else if (playerOneChoice.includes(3) && playerOneChoice.includes(5) && playerOneChoice.includes(7)){   
+        return true;
+    } else { 
+        return false;
+    }
+}
+
+
+
+// function checking winner player 2 returning true or false
+function checkWinnerTwoMiniMax(){
+    if (playerTwoChoice.includes(1) && playerTwoChoice.includes(2) && playerTwoChoice.includes(3)){
+        return true;
+    } else if (playerTwoChoice.includes(4) && playerTwoChoice.includes(5) && playerTwoChoice.includes(6)){
+        return true;
+    } else if (playerTwoChoice.includes(7) && playerTwoChoice.includes(8) && playerTwoChoice.includes(9)){
+        return true;
+    } else if (playerTwoChoice.includes(1) && playerTwoChoice.includes(4) && playerTwoChoice.includes(7)){
+        return true;
+    } else if (playerTwoChoice.includes(2) && playerTwoChoice.includes(5) && playerTwoChoice.includes(8)){
+        return true;
+    } else if (playerTwoChoice.includes(3) && playerTwoChoice.includes(6) && playerTwoChoice.includes(9)){
+        return true;
+    } else if (playerTwoChoice.includes(1) && playerTwoChoice.includes(5) && playerTwoChoice.includes(9)){
+        return true;
+    } else if (playerTwoChoice.includes(3) && playerTwoChoice.includes(5) && playerTwoChoice.includes(7)){
+        return true;
+    } else {
+        return false;
+    }
+}
+
+
+
+// function checking for a tie returning true or false
+function checkForTieMiniMax (){
+    if (playerOneChoice.length === 5 && tieFlag === 0){
+        return true;
+    } else if (playerTwoChoice.length === 5 && tieFlag === 0){
+        return true;
+    } else {
+        return false;
+    }
+}
     
 
-// let score = -Infinity
 
-// function miniMax(){
+// minimax function
+function miniMaxFunction(){
 
-//     if (checkWinnerOneMiniMax()) {
-//         return score = -1;
-//     } 
-//     else if (checkWinnerTwoMiniMax()){
-//         return score = 1;
-//     } 
-//     else if (checkForTieMiniMax()){
-//         return score = 0;
-//     }
+    if (checkWinnerOneMiniMax()) {
+        return score = -1;
+    } 
+    else if (checkWinnerTwoMiniMax()){
+        return score = 1;
+    } 
+    else if (checkForTieMiniMax()){
+        return score = 0;
+    }
+    console.log(score);
 
-// console.log(score)
-// }
+    let allTestPlay = [];
+
+    for (let k = 0; k < computerValueArray.length; k++){
+        let currentTestPlayIndex = [];
+        let currentTestPlayScore = [];
+        currentTestPlayIndex.push(computerValueArray[k])
+    
+        if (player === "playerOne"){
+            playerOneChoice.push(computerValueArray[k])
+            //console.log(playerOneChoice + " wooooottttt")
+            return player = "smartComputer"
+        }
+        if (player === "smartComputer"){
+            playerTwoChoice.push(computerValueArray[k])
+            return player = "playerOne"
+        }
+        if (player === "playerOne"){
+            miniMaxFunction()
+            currentTestPlayScore = score;
+            
+        }
+        if (player === "smartComputer"){
+            miniMaxFunction()
+            currentTestPlayScore = score;
+          
+        }
+        playerOneChoice.splice(computerValueArray[k],1);
+        playerTwoChoice.splice(computerValueArray[k],1);
+        allTestPlay.push(currentTestPlayScore)
+    }
+
+        let bestTestPlay = null;
+
+        if (player === "smartComputer"){
+            let bestScore = -Infinity;
+            for (z = 0; z < allTestPlay.length; z++){
+                if (allTestPlay[z] > bestScore){
+                    bestScore = allTestPlay[z];
+                    bestTestPlay = z;
+                }
+            }
+        } else {
+            let bestScore = -Infinity;
+            for (z = 0; z < allTestPlay.length; z++){
+                if (allTestPlay[z] < bestScore){
+                    bestScore = allTestPlay[z];
+                    bestTestPlay = z;
+                }
+            }
+
+        }
+
+        return allTestPlay[bestTestPlay]
+        
+
+}
+
+const bestPlayInfo = miniMaxFunction();
