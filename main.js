@@ -41,8 +41,8 @@
     let scorePlayerOne = 0;
     let scorePlayerTwo = 0;
 
-    let playerOneChoiceMinimax = [];
-    let playerTwoChoiceMinimax = [];
+    // let playerOneChoiceMinimax = [];
+    // let playerTwoChoiceMinimax = [];
 
 
 
@@ -87,13 +87,6 @@ function buttonOneClick(){
     if (player === "playerOne" && computerPlayerStatus === 1){
         document.querySelector('#button1').innerHTML = " X ";
         playerOneChoice.push(1);
-
-
-
-        playerOneChoiceMinimax.push(1);
-
-
-
         buttonOne.removeEventListener('click', buttonOneClick);
         document.querySelector('#playerUp').innerHTML = "Player X's turn.";
         checkWinnerOne()
@@ -133,13 +126,6 @@ function buttonTwoClick(){
     if (player === "playerOne" && computerPlayerStatus === 1){
         document.querySelector('#button2').innerHTML = " X ";
         playerOneChoice.push(2);
-
-
-        
-        playerOneChoiceMinimax.push(2);
-
-
-
         buttonTwo.removeEventListener('click', buttonTwoClick);
         document.querySelector('#playerUp').innerHTML = "Player X's turn.";
         checkWinnerOne()
@@ -179,13 +165,6 @@ function buttonThreeClick(){
     if (player === "playerOne" && computerPlayerStatus === 1){
         document.querySelector('#button3').innerHTML = " X ";
         playerOneChoice.push(3);
-
-
-        
-        playerOneChoiceMinimax.push(3);
-
-
-
         buttonThree.removeEventListener('click', buttonThreeClick);
         document.querySelector('#playerUp').innerHTML = "Player X's turn.";
         checkWinnerOne()
@@ -225,13 +204,6 @@ function buttonFourClick(){
     if (player === "playerOne" && computerPlayerStatus === 1){
         document.querySelector('#button4').innerHTML = " X ";
         playerOneChoice.push(4);
-
-
-        
-        playerOneChoiceMinimax.push(4);
-
-
-
         buttonFour.removeEventListener('click', buttonFourClick);
         document.querySelector('#playerUp').innerHTML = "Player X's turn.";
         checkWinnerOne()
@@ -271,13 +243,6 @@ function buttonFiveClick(){
     if (player === "playerOne" && computerPlayerStatus === 1){
         document.querySelector('#button5').innerHTML = " X ";
         playerOneChoice.push(5);
-
-
-        
-        playerOneChoiceMinimax.push(5);
-
-
-
         buttonFive.removeEventListener('click', buttonFiveClick);
         document.querySelector('#playerUp').innerHTML = "Player X's turn.";
         checkWinnerOne()
@@ -317,13 +282,6 @@ function buttonSixClick(){
     if (player === "playerOne" && computerPlayerStatus === 1){
         document.querySelector('#button6').innerHTML = " X ";
         playerOneChoice.push(6);
-
-
-        
-        playerOneChoiceMinimax.push(6);
-
-
-
         buttonSix.removeEventListener('click', buttonSixClick);
         document.querySelector('#playerUp').innerHTML = "Player X's turn.";
         checkWinnerOne()
@@ -363,13 +321,6 @@ function buttonSevenClick(){
     if (player === "playerOne" && computerPlayerStatus === 1){
         document.querySelector('#button7').innerHTML = " X ";
         playerOneChoice.push(7);
-
-
-        
-        playerOneChoiceMinimax.push(7);
-
-
-
         buttonSeven.removeEventListener('click', buttonSevenClick);
         document.querySelector('#playerUp').innerHTML = "Player X's turn.";
         checkWinnerOne()
@@ -409,13 +360,6 @@ function buttonEightClick(){
     if (player === "playerOne" && computerPlayerStatus === 1){
         document.querySelector('#button8').innerHTML = " X ";
         playerOneChoice.push(8);
-
-
-        
-        playerOneChoiceMinimax.push(8);
-
-
-
         buttonEight.removeEventListener('click', buttonEightClick);
         document.querySelector('#playerUp').innerHTML = "Player X's turn.";
         checkWinnerOne()
@@ -455,13 +399,6 @@ function buttonNineClick(){
     if (player === "playerOne" && computerPlayerStatus === 1){
         document.querySelector('#button9').innerHTML = " X ";
         playerOneChoice.push(9);
-
-
-        
-        playerOneChoiceMinimax.push(9);
-
-
-
         buttonNine.removeEventListener('click', buttonNineClick);
         document.querySelector('#playerUp').innerHTML = "Player X's turn.";
         checkWinnerOne()
@@ -660,9 +597,18 @@ function compPlayerDelayButtonOne(){
         }
     }
        // console.log(computerValueArray + " whats left on the board")
-        computerValue = Math.floor(Math.random() * computerValueArray.length);
+    for(z=0;z<computerValueArray.length;z++){
+        if (computerValueArray.includes(5)){
+            computerValue = computerValueArray.indexOf(5);
+        } else if (computerValueArray.includes(4)) {
+            computerValue = computerValueArray.indexOf(4);
+        } else if (computerValueArray.includes(6)){
+            computerValue = computerValueArray.indexOf(6);
+        } else {
+            computerValue = Math.floor(Math.random() * computerValueArray.length);
+        }
+    }
         playerTwoChoice.push(computerValueArray[computerValue]);
-
     checkWinnerTwo()
         // console.log(playerTwoChoice + " the computers choice")
     for (i=0;i<playerTwoChoice.length; i++){
@@ -753,7 +699,17 @@ function compPlayerDelayButtonTwo(){
             computerValueArray.splice(j,1);
         }
     }
-        computerValue = Math.floor(Math.random() * computerValueArray.length);
+    for(z=0;z<computerValueArray.length;z++){
+        if (computerValueArray.includes(5)){
+            computerValue = computerValueArray.indexOf(5);
+        } else if (computerValueArray.includes(4)) {
+            computerValue = computerValueArray.indexOf(4);
+        } else if (computerValueArray.includes(6)){
+            computerValue = computerValueArray.indexOf(6);
+        } else {
+            computerValue = Math.floor(Math.random() * computerValueArray.length);
+        }
+    }
         playerTwoChoice.push(computerValueArray[computerValue]);
     checkWinnerTwo()
         //console.log(playerTwoChoice);
@@ -845,7 +801,17 @@ function compPlayerDelayButtonThree(){
             computerValueArray.splice(j,1);
         }
     }
-        computerValue = Math.floor(Math.random() * computerValueArray.length);
+    for(z=0;z<computerValueArray.length;z++){
+        if (computerValueArray.includes(5)){
+            computerValue = computerValueArray.indexOf(5);
+        } else if (computerValueArray.includes(4)) {
+            computerValue = computerValueArray.indexOf(4);
+        } else if (computerValueArray.includes(6)){
+            computerValue = computerValueArray.indexOf(6);
+        } else {
+            computerValue = Math.floor(Math.random() * computerValueArray.length);
+        }
+    }
         playerTwoChoice.push(computerValueArray[computerValue]);
     checkWinnerTwo()
         //console.log(playerTwoChoice);
@@ -937,7 +903,17 @@ function compPlayerDelayButtonFour(){
             computerValueArray.splice(j,1);
         }
     }
-        computerValue = Math.floor(Math.random() * computerValueArray.length);
+    for(z=0;z<computerValueArray.length;z++){
+        if (computerValueArray.includes(5)){
+            computerValue = computerValueArray.indexOf(5);
+        } else if (computerValueArray.includes(4)) {
+            computerValue = computerValueArray.indexOf(4);
+        } else if (computerValueArray.includes(6)){
+            computerValue = computerValueArray.indexOf(6);
+        } else {
+            computerValue = Math.floor(Math.random() * computerValueArray.length);
+        }
+    }
         playerTwoChoice.push(computerValueArray[computerValue]);
     checkWinnerTwo()
         //console.log(playerTwoChoice);
@@ -1029,7 +1005,17 @@ function compPlayerDelayButtonFive(){
             computerValueArray.splice(j,1);
         }
     }
-        computerValue = Math.floor(Math.random() * computerValueArray.length);
+    for(z=0;z<computerValueArray.length;z++){
+        if (computerValueArray.includes(5)){
+            computerValue = computerValueArray.indexOf(5);
+        } else if (computerValueArray.includes(4)) {
+            computerValue = computerValueArray.indexOf(4);
+        } else if (computerValueArray.includes(6)){
+            computerValue = computerValueArray.indexOf(6);
+        } else {
+            computerValue = Math.floor(Math.random() * computerValueArray.length);
+        }
+    }
         playerTwoChoice.push(computerValueArray[computerValue]);
     checkWinnerTwo()
         //console.log(playerTwoChoice);
@@ -1121,7 +1107,17 @@ function compPlayerDelayButtonSix(){
             computerValueArray.splice(j,1);
         }
     }
-        computerValue = Math.floor(Math.random() * computerValueArray.length);
+    for(z=0;z<computerValueArray.length;z++){
+        if (computerValueArray.includes(5)){
+            computerValue = computerValueArray.indexOf(5);
+        } else if (computerValueArray.includes(4)) {
+            computerValue = computerValueArray.indexOf(4);
+        } else if (computerValueArray.includes(6)){
+            computerValue = computerValueArray.indexOf(6);
+        } else {
+            computerValue = Math.floor(Math.random() * computerValueArray.length);
+        }
+    }
         playerTwoChoice.push(computerValueArray[computerValue]);
     checkWinnerTwo()
         //console.log(playerTwoChoice);
@@ -1213,7 +1209,17 @@ function compPlayerDelayButtonSeven(){
             computerValueArray.splice(j,1);
         }
     }
-        computerValue = Math.floor(Math.random() * computerValueArray.length);
+    for(z=0;z<computerValueArray.length;z++){
+        if (computerValueArray.includes(5)){
+            computerValue = computerValueArray.indexOf(5);
+        } else if (computerValueArray.includes(4)) {
+            computerValue = computerValueArray.indexOf(4);
+        } else if (computerValueArray.includes(6)){
+            computerValue = computerValueArray.indexOf(6);
+        } else {
+            computerValue = Math.floor(Math.random() * computerValueArray.length);
+        }
+    }
         playerTwoChoice.push(computerValueArray[computerValue]);
     checkWinnerTwo()
         //console.log(playerTwoChoice);
@@ -1305,7 +1311,17 @@ function compPlayerDelayButtonEight(){
             computerValueArray.splice(j,1);
         }
     }
-        computerValue = Math.floor(Math.random() * computerValueArray.length);
+    for(z=0;z<computerValueArray.length;z++){
+        if (computerValueArray.includes(5)){
+            computerValue = computerValueArray.indexOf(5);
+        } else if (computerValueArray.includes(4)) {
+            computerValue = computerValueArray.indexOf(4);
+        } else if (computerValueArray.includes(6)){
+            computerValue = computerValueArray.indexOf(6);
+        } else {
+            computerValue = Math.floor(Math.random() * computerValueArray.length);
+        }
+    }
         playerTwoChoice.push(computerValueArray[computerValue]);
     checkWinnerTwo()
         //console.log(playerTwoChoice);
@@ -1397,7 +1413,17 @@ function compPlayerDelayButtonNine(){
             computerValueArray.splice(j,1);
         }
     }
-        computerValue = Math.floor(Math.random() * computerValueArray.length);
+    for(z=0;z<computerValueArray.length;z++){
+        if (computerValueArray.includes(5)){
+            computerValue = computerValueArray.indexOf(5);
+        } else if (computerValueArray.includes(4)) {
+            computerValue = computerValueArray.indexOf(4);
+        } else if (computerValueArray.includes(6)){
+            computerValue = computerValueArray.indexOf(6);
+        } else {
+            computerValue = Math.floor(Math.random() * computerValueArray.length);
+        }
+    }
         playerTwoChoice.push(computerValueArray[computerValue]);
     checkWinnerTwo()
         //console.log(playerTwoChoice);
