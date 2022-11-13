@@ -87,7 +87,13 @@ function buttonOneClick(){
     if (player === "playerOne" && computerPlayerStatus === 1){
         document.querySelector('#button1').innerHTML = " X ";
         playerOneChoice.push(1);
+
+
+
         playerOneChoiceMinimax.push(1);
+
+
+
         buttonOne.removeEventListener('click', buttonOneClick);
         document.querySelector('#playerUp').innerHTML = "Player X's turn.";
         checkWinnerOne()
@@ -127,6 +133,13 @@ function buttonTwoClick(){
     if (player === "playerOne" && computerPlayerStatus === 1){
         document.querySelector('#button2').innerHTML = " X ";
         playerOneChoice.push(2);
+
+
+        
+        playerOneChoiceMinimax.push(2);
+
+
+
         buttonTwo.removeEventListener('click', buttonTwoClick);
         document.querySelector('#playerUp').innerHTML = "Player X's turn.";
         checkWinnerOne()
@@ -166,6 +179,13 @@ function buttonThreeClick(){
     if (player === "playerOne" && computerPlayerStatus === 1){
         document.querySelector('#button3').innerHTML = " X ";
         playerOneChoice.push(3);
+
+
+        
+        playerOneChoiceMinimax.push(3);
+
+
+
         buttonThree.removeEventListener('click', buttonThreeClick);
         document.querySelector('#playerUp').innerHTML = "Player X's turn.";
         checkWinnerOne()
@@ -205,6 +225,13 @@ function buttonFourClick(){
     if (player === "playerOne" && computerPlayerStatus === 1){
         document.querySelector('#button4').innerHTML = " X ";
         playerOneChoice.push(4);
+
+
+        
+        playerOneChoiceMinimax.push(4);
+
+
+
         buttonFour.removeEventListener('click', buttonFourClick);
         document.querySelector('#playerUp').innerHTML = "Player X's turn.";
         checkWinnerOne()
@@ -244,6 +271,13 @@ function buttonFiveClick(){
     if (player === "playerOne" && computerPlayerStatus === 1){
         document.querySelector('#button5').innerHTML = " X ";
         playerOneChoice.push(5);
+
+
+        
+        playerOneChoiceMinimax.push(5);
+
+
+
         buttonFive.removeEventListener('click', buttonFiveClick);
         document.querySelector('#playerUp').innerHTML = "Player X's turn.";
         checkWinnerOne()
@@ -283,6 +317,13 @@ function buttonSixClick(){
     if (player === "playerOne" && computerPlayerStatus === 1){
         document.querySelector('#button6').innerHTML = " X ";
         playerOneChoice.push(6);
+
+
+        
+        playerOneChoiceMinimax.push(6);
+
+
+
         buttonSix.removeEventListener('click', buttonSixClick);
         document.querySelector('#playerUp').innerHTML = "Player X's turn.";
         checkWinnerOne()
@@ -322,6 +363,13 @@ function buttonSevenClick(){
     if (player === "playerOne" && computerPlayerStatus === 1){
         document.querySelector('#button7').innerHTML = " X ";
         playerOneChoice.push(7);
+
+
+        
+        playerOneChoiceMinimax.push(7);
+
+
+
         buttonSeven.removeEventListener('click', buttonSevenClick);
         document.querySelector('#playerUp').innerHTML = "Player X's turn.";
         checkWinnerOne()
@@ -361,6 +409,13 @@ function buttonEightClick(){
     if (player === "playerOne" && computerPlayerStatus === 1){
         document.querySelector('#button8').innerHTML = " X ";
         playerOneChoice.push(8);
+
+
+        
+        playerOneChoiceMinimax.push(8);
+
+
+
         buttonEight.removeEventListener('click', buttonEightClick);
         document.querySelector('#playerUp').innerHTML = "Player X's turn.";
         checkWinnerOne()
@@ -400,6 +455,13 @@ function buttonNineClick(){
     if (player === "playerOne" && computerPlayerStatus === 1){
         document.querySelector('#button9').innerHTML = " X ";
         playerOneChoice.push(9);
+
+
+        
+        playerOneChoiceMinimax.push(9);
+
+
+
         buttonNine.removeEventListener('click', buttonNineClick);
         document.querySelector('#playerUp').innerHTML = "Player X's turn.";
         checkWinnerOne()
@@ -597,15 +659,12 @@ function compPlayerDelayButtonOne(){
             computerValueArray.splice(j,1);
         }
     }
-        // console.log(computerValueArray + " whats left on the board")
-
-       // computerValue = Math.floor(Math.random() * computerValueArray.length);
-          computerValue = (miniMaxFunction())
+       // console.log(computerValueArray + " whats left on the board")
+       computerValue = Math.floor(Math.random() * computerValueArray.length);
+         
           
-       //-------minimax attempt---
-
-
         playerTwoChoice.push(computerValueArray[computerValue]);
+
     checkWinnerTwo()
         // console.log(playerTwoChoice + " the computers choice")
     for (i=0;i<playerTwoChoice.length; i++){
@@ -698,6 +757,7 @@ function compPlayerDelayButtonTwo(){
     }
         //console.log(computerValueArray);
         computerValue = Math.floor(Math.random() * computerValueArray.length);
+
         playerTwoChoice.push(computerValueArray[computerValue]);
     checkWinnerTwo()
         //console.log(playerTwoChoice);
@@ -791,6 +851,7 @@ function compPlayerDelayButtonThree(){
     }
         //console.log(computerValueArray);
         computerValue = Math.floor(Math.random() * computerValueArray.length);
+
         playerTwoChoice.push(computerValueArray[computerValue]);
     checkWinnerTwo()
         //console.log(playerTwoChoice);
@@ -884,6 +945,7 @@ function compPlayerDelayButtonFour(){
     }
         //console.log(computerValueArray);
         computerValue = Math.floor(Math.random() * computerValueArray.length);
+  
         playerTwoChoice.push(computerValueArray[computerValue]);
     checkWinnerTwo()
         //console.log(playerTwoChoice);
@@ -977,6 +1039,7 @@ function compPlayerDelayButtonFive(){
     }
         //console.log(computerValueArray);
         computerValue = Math.floor(Math.random() * computerValueArray.length);
+
         playerTwoChoice.push(computerValueArray[computerValue]);
     checkWinnerTwo()
         //console.log(playerTwoChoice);
@@ -1070,6 +1133,7 @@ function compPlayerDelayButtonSix(){
     }
         //console.log(computerValueArray);
         computerValue = Math.floor(Math.random() * computerValueArray.length);
+
         playerTwoChoice.push(computerValueArray[computerValue]);
     checkWinnerTwo()
         //console.log(playerTwoChoice);
@@ -1163,6 +1227,7 @@ function compPlayerDelayButtonSeven(){
     }
         //console.log(computerValueArray);
         computerValue = Math.floor(Math.random() * computerValueArray.length);
+
         playerTwoChoice.push(computerValueArray[computerValue]);
     checkWinnerTwo()
         //console.log(playerTwoChoice);
@@ -1256,6 +1321,8 @@ function compPlayerDelayButtonEight(){
     }
         //console.log(computerValueArray);
         computerValue = Math.floor(Math.random() * computerValueArray.length);
+
+
         playerTwoChoice.push(computerValueArray[computerValue]);
     checkWinnerTwo()
         //console.log(playerTwoChoice);
@@ -1349,6 +1416,8 @@ function compPlayerDelayButtonNine(){
     }
         //console.log(computerValueArray);
         computerValue = Math.floor(Math.random() * computerValueArray.length);
+
+
         playerTwoChoice.push(computerValueArray[computerValue]);
     checkWinnerTwo()
         //console.log(playerTwoChoice);
@@ -1435,8 +1504,7 @@ function compPlayerDelayButtonNine(){
 // --------mini-max algorithm --------------------------------
 
 
-// global variables
-    let score = -Infinity
+
 
 
 
@@ -1502,90 +1570,99 @@ function checkForTieMiniMax (){
 }
     
 
+let bestTestPlay = null;
 
 // minimax function
-function miniMaxFunction(){
+function miniMaxFunction(mark){
+
+    let playerMini = "playerOne"
+
+    bestTestPlay = null;
 
     if (checkWinnerOneMiniMax()) {
-        return score = -1;
+        return { score: -1 };
     } 
     else if (checkWinnerTwoMiniMax()){
-        return score = 1;
+        return {score: 1};
     } 
     else if (checkForTieMiniMax()){
-        return score = 0;
+        return {score: 0};
     }
-  
 
-    let allTestPlay = [];
+    let openSpaces = computerValueArray; //  ----------- debuggging
 
-    console.log(allTestPlay)
+    let allTestPlayInfo = [];
 
-    for (let k = 0; k < computerValueArray.length; k++){
-        let currentTestPlayIndex = [];
+    console.log(allTestPlayInfo)
+
+    for (let k = 0; k < openSpaces.length; k++){
         let currentTestPlayScore = [];
-        currentTestPlayIndex.push(computerValueArray[k])
-    
-        if (player === "playerOne"){
-            playerOneChoiceMinimax.push(computerValueArray[k])
-            //console.log(playerOneChoice + " p1")
-            //console.log(score)
-            player = "smartComputer"
-        } else {
+        let currentTestPlayIndex = [];
+        currentTestPlayIndex.push(openSpaces[k])
+        if (playerMini === "playerOne"){
+            playerOneChoiceMinimax.push(openSpaces[k])
+            console.log(playerOneChoiceMinimax + " p1cmm")
+            
+        } 
+        if (playerMini === "smartComputer"){
+            playerTwoChoiceMinimax.push(openSpaces[k])
+            console.log(playerOneChoiceMinimax + " p2cmm")
+            
+        } 
 
-        }
-        if (player === "smartComputer"){
-            playerTwoChoiceMinimax.push(computerValueArray[k])
-            //console.log("p2")
-            player = "playerOne"
-        } else {
-
-        }
-        if (player === "playerOne"){
-            miniMaxFunction()
-            currentTestPlayScore = score;
+        
+        if (mark === aiMark){
+           
+            const result = miniMaxFunction(humanMark)
+            currentTestPlayScore = result.score;
             
         }
-        if (player === "smartComputer"){
-            miniMaxFunction()
-            currentTestPlayScore = score;
+        else {
+            
+            const result = miniMaxFunction(aiMark)
+            currentTestPlayScore = result.score;
           
         }
         console.log(computerValueArray[k] + " k")
         console.log(score)
- // using playerOneChoice and playerOneChoiceMiniMax
+        // using playerOneChoice and playerOneChoiceMiniMax
 
-        allTestPlay.push(currentTestPlayScore)
+        return allTestPlayInfo.push(currentTestPlayScore)
         
     }
-        console.log(allTestPlay)
+        // console.log(allTestPlay)
 
-        let bestTestPlay = null;
+    
         
-        if (player === "playerOne") {
-            let bestScore = -Infinity;
-            for (z = 0; z < allTestPlay.length; z++){
-                if (allTestPlay[z] < bestScore){
-                    bestScore = allTestPlay[z];
-                    bestTestPlay = z;
-                    console.log(bestTestPlay)
-                }
-            }
-
-        }
-        if (player === "smartComputer"){
+    if (playerMini === "playerOne") {
             let bestScore = -Infinity;
             for (z = 0; z < allTestPlay.length; z++){
                 if (allTestPlay[z] > bestScore){
                     bestScore = allTestPlay[z];
                     bestTestPlay = z;
-                    console.log(bestTestPlay)
+                    // console.log(bestTestPlay + " player me")
+                    
                 }
             }
-        } 
 
+    }
+    else if (playerMini === "smartComputer"){
+            let bestScore = -Infinity;
+            for (z = 0; z < allTestPlay.length; z++){
+                if (allTestPlay[z] < bestScore){
+                    bestScore = allTestPlay[z];
+                    bestTestPlay = z;
+                    // console.log(bestTestPlay + "player sc")
+                
+                }
+            }
+    } 
+        // console.log(z + " z")
         console.log(bestTestPlay + " btp") 
-        
+        return bestTestPlay
 
 }
 
+function resetMiniMax() {
+    return score = -Infinity;
+}
