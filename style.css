@@ -48,13 +48,13 @@ h4 {
 }
 
 #resetButtonId {
-    margin: 26px 4px 16px 8px;
+    margin: 26px 2px 16px 8px;
     background: rgb(246, 240, 215);
     font-family: 'Gaegu', sans-serif;
     font-size: 16px;
 }
 #computerPlayerId {
-    margin: 26px 8px 16px 4px;
+    margin: 26px 8px 16px 2px;
     background: rgb(246, 240, 215);
     font-family: 'Gaegu', sans-serif;
     font-size: 16px;
