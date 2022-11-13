@@ -600,10 +600,6 @@ function compPlayerDelayButtonOne(){
     for(z=0;z<computerValueArray.length;z++){
         if (computerValueArray.includes(5)){
             computerValue = computerValueArray.indexOf(5);
-        } else if (computerValueArray.includes(4)) {
-            computerValue = computerValueArray.indexOf(4);
-        } else if (computerValueArray.includes(6)){
-            computerValue = computerValueArray.indexOf(6);
         } else {
             computerValue = Math.floor(Math.random() * computerValueArray.length);
         }
@@ -702,10 +698,6 @@ function compPlayerDelayButtonTwo(){
     for(z=0;z<computerValueArray.length;z++){
         if (computerValueArray.includes(5)){
             computerValue = computerValueArray.indexOf(5);
-        } else if (computerValueArray.includes(4)) {
-            computerValue = computerValueArray.indexOf(4);
-        } else if (computerValueArray.includes(6)){
-            computerValue = computerValueArray.indexOf(6);
         } else {
             computerValue = Math.floor(Math.random() * computerValueArray.length);
         }
@@ -804,10 +796,6 @@ function compPlayerDelayButtonThree(){
     for(z=0;z<computerValueArray.length;z++){
         if (computerValueArray.includes(5)){
             computerValue = computerValueArray.indexOf(5);
-        } else if (computerValueArray.includes(4)) {
-            computerValue = computerValueArray.indexOf(4);
-        } else if (computerValueArray.includes(6)){
-            computerValue = computerValueArray.indexOf(6);
         } else {
             computerValue = Math.floor(Math.random() * computerValueArray.length);
         }
@@ -906,10 +894,6 @@ function compPlayerDelayButtonFour(){
     for(z=0;z<computerValueArray.length;z++){
         if (computerValueArray.includes(5)){
             computerValue = computerValueArray.indexOf(5);
-        } else if (computerValueArray.includes(4)) {
-            computerValue = computerValueArray.indexOf(4);
-        } else if (computerValueArray.includes(6)){
-            computerValue = computerValueArray.indexOf(6);
         } else {
             computerValue = Math.floor(Math.random() * computerValueArray.length);
         }
@@ -1008,10 +992,6 @@ function compPlayerDelayButtonFive(){
     for(z=0;z<computerValueArray.length;z++){
         if (computerValueArray.includes(5)){
             computerValue = computerValueArray.indexOf(5);
-        } else if (computerValueArray.includes(4)) {
-            computerValue = computerValueArray.indexOf(4);
-        } else if (computerValueArray.includes(6)){
-            computerValue = computerValueArray.indexOf(6);
         } else {
             computerValue = Math.floor(Math.random() * computerValueArray.length);
         }
@@ -1110,10 +1090,6 @@ function compPlayerDelayButtonSix(){
     for(z=0;z<computerValueArray.length;z++){
         if (computerValueArray.includes(5)){
             computerValue = computerValueArray.indexOf(5);
-        } else if (computerValueArray.includes(4)) {
-            computerValue = computerValueArray.indexOf(4);
-        } else if (computerValueArray.includes(6)){
-            computerValue = computerValueArray.indexOf(6);
         } else {
             computerValue = Math.floor(Math.random() * computerValueArray.length);
         }
@@ -1212,10 +1188,6 @@ function compPlayerDelayButtonSeven(){
     for(z=0;z<computerValueArray.length;z++){
         if (computerValueArray.includes(5)){
             computerValue = computerValueArray.indexOf(5);
-        } else if (computerValueArray.includes(4)) {
-            computerValue = computerValueArray.indexOf(4);
-        } else if (computerValueArray.includes(6)){
-            computerValue = computerValueArray.indexOf(6);
         } else {
             computerValue = Math.floor(Math.random() * computerValueArray.length);
         }
@@ -1314,10 +1286,6 @@ function compPlayerDelayButtonEight(){
     for(z=0;z<computerValueArray.length;z++){
         if (computerValueArray.includes(5)){
             computerValue = computerValueArray.indexOf(5);
-        } else if (computerValueArray.includes(4)) {
-            computerValue = computerValueArray.indexOf(4);
-        } else if (computerValueArray.includes(6)){
-            computerValue = computerValueArray.indexOf(6);
         } else {
             computerValue = Math.floor(Math.random() * computerValueArray.length);
         }
@@ -1416,10 +1384,6 @@ function compPlayerDelayButtonNine(){
     for(z=0;z<computerValueArray.length;z++){
         if (computerValueArray.includes(5)){
             computerValue = computerValueArray.indexOf(5);
-        } else if (computerValueArray.includes(4)) {
-            computerValue = computerValueArray.indexOf(4);
-        } else if (computerValueArray.includes(6)){
-            computerValue = computerValueArray.indexOf(6);
         } else {
             computerValue = Math.floor(Math.random() * computerValueArray.length);
         }
