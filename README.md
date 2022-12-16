@@ -1,4 +1,12 @@
-# TTT sudo code
+# Tic Tac Toe
+
+## Link to Deploymeny
+
+```bash
+https://project-0-tictactoe.netlify.app/
+```
+
+##TTT sudo code
 
 -make 9 buttons, line breking each 3
 -create all open strings
