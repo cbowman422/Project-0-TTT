@@ -1,6 +1,6 @@
 # Tic Tac Toe
 
-## Link to Deploymeny
+## Link to Deployment
 https://project-0-tictactoe.netlify.app/
 
 
