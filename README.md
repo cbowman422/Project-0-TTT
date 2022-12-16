@@ -1,10 +1,8 @@
 # Tic Tac Toe
 
 ## Link to Deploymeny
-
-```bash
 https://project-0-tictactoe.netlify.app/
-```
+
 
 ##TTT sudo code
 
